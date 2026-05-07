@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --main-color: #2E4E8A; }
+        
+        .portfolio-title { color: var(--main-color); font-weight: 700; }
+        
+        /* Hover Scroll Effect */
+        .screenshot-card {
+            height: 300px;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            border: 1px solid #eee;
+            position: relative;
+            background: #f8f9fa;
+        }
+        .screenshot-card img {
+            width: 100%;
+            transition: transform 6s ease-in-out; /* Smooth slow scroll */
+            transform-origin: top;
+        }
+        .screenshot-card:hover img {
+            transform: translateY(calc(-100% + 300px));
+        }
+
+        .card { border: none; transition: 0.3s; }
+        .card:hover { transform: translateY(-10px); }
+        
+        .btn-view { background-color: var(--main-color); color: white; border-radius: 20px; font-weight: 500; }
+        .btn-view:hover { background-color: #1e3a6d; color: white; }
+        
+        .service-desc { font-size: 0.9rem; min-height: 60px; }
+    </style>
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="portfolio-title fs-1">Our Portfolio</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+            We specialize in creating high-performance, visually stunning websites and custom software solutions designed to scale your business.
+        </p>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="portfolio-grid">
+        <!-- JS will inject 6 cards here -->
+    </div>
+</div>
+
+<!-- Reusable Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="m-title" style="color: var(--main-color);">Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0 text-center" id="modalBody">
+                <!-- Content (Img/PDF) injected by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1. Data with Headings and Descriptions
+    const projects = [
+        { 
+            title: "Basic Website Development", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Ideal for small businesses. Clean, responsive layouts that establish your online presence effectively."
+        },
+        { 
+            title: "Single Page Website Development", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Fast-loading landing pages and single-page apps perfect for product launches and portfolios."
+        },
+        { 
+            title: "WordPress Website Development", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Easily manageable CMS solutions with custom themes and powerful plugins for dynamic content."
+        },
+        { 
+            title: "Custom Website Development", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Tailor-made websites built from scratch to meet your specific branding and functional requirements."
+        },
+        { 
+            title: "Custom Web Software Development", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Complex web applications and internal tools designed to automate your business workflows."
+        },
+        { 
+            title: "Website Revamp", 
+            img: "ss.png", 
+            file: "ss.png",
+            desc: "Modernizing your old website with better UI/UX, faster speed, and SEO-friendly architecture."
+        }
+    ];
+
+    // 2. Generate cards dynamically
+    const grid = document.getElementById('portfolio-grid');
+    projects.forEach((item) => {
+        grid.innerHTML += `
+            <div class="col">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <div class="screenshot-card" onclick="openModal('${item.file}', '${item.title}')">
+                        <img src="${item.img}" alt="${item.title}">
+                    </div>
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2" style="color: #222;">${item.title}</h5>
+                        <p class="text-muted service-desc px-2">${item.desc}</p>
+                       
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    // 3. Modal logic
+    function openModal(fileUrl, title) {
+        const body = document.getElementById('modalBody');
+        document.getElementById('m-title').innerText = title;
+        
+        // Loader logic
+        body.innerHTML = '<div class="p-5 text-muted">Loading preview...</div>';
+        
+        setTimeout(() => {
+            if (fileUrl.toLowerCase().endsWith('.pdf')) {
+                body.innerHTML = `<iframe src="${fileUrl}" width="100%" height="75vh" style="border:none;"></iframe>`;
+            } else {
+                body.innerHTML = `<img src="${fileUrl}" class="img-fluid w-100 shadow">`;
+            }
+        }, 300);
+        
+        const myModal = new bootstrap.Modal(document.getElementById('previewModal'));
+        myModal.show();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Team IT Vowel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hero.css">
+<script src="js/script.js"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-78332KC7JP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-78332KC7JP');
+</script>
+     <style>
+        /* --- THE DYNAMIC BACKGROUND --- */
+        :root {
+            /* Colors extracted from your logo image */
+            --logo-purple: #6c5ce7;
+            --logo-pink: #ed6ea0;
+            --logo-blue: #4facfe;
+            --dark-text: #1a1a2e;
+        }
+        body {
+            margin: 0;
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            /* This creates the logo-related background */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(108, 92, 231, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(237, 110, 160, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(79, 172, 254, 0.15) 0px, transparent 50%),
+                radial-gradient(at 0% 100%, rgba(108, 92, 231, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--dark-text);
+            min-height: 100vh;
+        }
+
+        /* Animated background blob for extra "pop" */
+        .bg-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, var(--logo-purple), var(--logo-pink));
+            filter: blur(150px);
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.2;
+            animation: move 20s infinite alternate;
+        }
+
+        @keyframes move {
+            from { transform: translate(-10%, -10%); }
+            to { transform: translate(20%, 20%); }
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 30px;
+            padding: 60px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.03);
+            margin-top: 50px;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, var(--logo-purple), var(--logo-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+        }
+
+        .stat-card {
+            border-left: 4px solid var(--logo-purple);
+            padding-left: 20px;
+            margin: 20px 0;
+        }
+
+        .stat-card h2 {
+            font-weight: 800;
+            margin-bottom: 0;
+            color: var(--logo-purple);
+        }
+     </style>
+
+</head>
+<body>
+<!-- Navbar Start -->
+<nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+
+<div class="container">
+
+<!-- Logo -->
+
+<a class="navbar-brand" href="#">
+<img src="images/logo-removebg-preview.png" alt="logo">
+</a>
+
+<!-- Mobile Button -->
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<!-- Menu -->
+
+<div class="collapse navbar-collapse" id="navbarMenu">
+
+<ul class="navbar-nav mx-auto gap-4">
+
+<li class="nav-item">
+<a class="nav-link" href="index.html">HOME</a>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+DIGITAL MARKETING
+</a>
+<ul class="dropdown-menu">
+ <li><a class="dropdown-item" href="digital-marketing/seo-services.html">SEO Services</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/local-seo.html">Local SEO</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/ppc-campaign.html">PPC Campaign</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/social-media.html">Social Media</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/email-marketing.html">Email Marketing</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/content-marketing.html">Content Marketing</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/video-marketing.html">Video Marketing</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/online-reputation-management.html">Online Reputation Management</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/locations/canada.html">Canada</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/locations/chandigarh.html">Chandigarh</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/locations/services.html">Services</a></li>
+ <li><a class="dropdown-item" href="digital-marketing/locations/usa.html">USA</a></li>
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+ECOMMERCE
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="ecommerce/canada.html">Canada</a></li>
+<li><a class="dropdown-item" href="ecommerce/chandigarh.html">Chandigarh</a></li>
+<li><a class="dropdown-item" href="ecommerce/quickweb.html">Quickweb</a></li>
+<li><a class="dropdown-item" href="ecommerce/singapoure.html">Singapore</a></li>
+<li><a class="dropdown-item" href="ecommerce/usa.html">USA</a></li>
+</ul>
+</li>
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+WEB DEVELOPMENT
+</a>
+<ul class="dropdown-menu">
+<li><a class="dropdown-item" href="web-devlopment/basic-web.html">Basic Website Development</a></li>
+<li><a class="dropdown-item" href="web-devlopment/on-page.html">Single Page Website Development</a></li>
+<li><a class="dropdown-item" href="web-devlopment/wordpress.html">WordPress Website Development</a></li>
+<li><a class="dropdown-item" href="web-devlopment/remp.html">Website Revamping</a></li>
+<li><a class="dropdown-item" href="web-devlopment/custom-web.html">Custom Website Development</a></li>
+<li><a class="dropdown-item" href="web-devlopment/custom-soft.html">Custom Web Software Development</a></li>
+
+</ul>
+</li>
+
+<li class="nav-item dropdown">
+<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+SERVICES
+</a>
+<ul class="dropdown-menu">
+ <li><a class="dropdown-item" href="services/web-design.html">Webdesign</a></li>
+ <li><a class="dropdown-item" href="services/white-label-marketing.html">White Label Marketing</a></li>
+<li><a class="dropdown-item" href="services/content.html">Content</a></li>
+<li><a class="dropdown-item" href="services/audit.html">Audit</a></li>
+</ul>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="about.html">ABOUT US</a>
+</li>
+
+</ul>
+
+<!-- Contact Button -->
+
+<a href="contact-us.html" class="contact-btn">Contact Us</a>
+
+</div>
+
+</div>
+
+</nav>
+
+    <div class="bg-blob"></div>
+
+    <div class="container py-5 mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="glass-header">
+                    <div class="row align-items-center">
+                        <!-- Left Side - Content -->
+                        <div class="col-lg-6">
+                            <h1 class="display-4 fw-bold mb-4">
+                                Get In <span class="text-gradient">Touch</span>
+                            </h1>
+                            <p class="lead mb-4">
+                                Have a project in mind? We'd love to hear from you. Let's build something amazing together.
+                            </p>
+                            
+                            <div class="stat-card">
+                                <h2>8+</h2>
+                                <p class="text-muted mb-0">Years of Experience</p>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <h2>500+</h2>
+                                <p class="text-muted mb-0">Projects Completed</p>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <h2>100%</h2>
+                                <p class="text-muted mb-0">Client Satisfaction</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Side - Form -->
+                        <div class="col-lg-6 mt-5 mt-lg-0">
+                            <div class="p-4 bg-white rounded-4 shadow-sm border border-light">
+                                <div id="successMessage" class="text-center d-none">
+                                    <h3 class="text-success mb-3">Thank You!</h3>
+                                    <p>We will contact you soon.</p>
+                                </div>
+                                <form class="contact-form" id="contactForm">
+                                  <div class="row g-3">
+                                    <div class="col-6">
+                                      <input type="text" name="first_name" placeholder="First Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-6">
+                                      <input type="text" name="last_name" placeholder="Last Name" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                      <div class="phone-input-wrapper">
+                                        <select name="country_code" class="country-select">
+                                          <option value="+1">+1 (US)</option>
+                                          <option value="+91" selected>+91 (IN)</option>
+                                          <option value="+44">+44 (UK)</option>
+                                          <option value="+61">+61 (AU)</option>
+                                          <option value="+1">+1 (CA)</option>
+                                          <option value="+64">+64 (NZ)</option>
+                                          <option value="+971">+971 (UAE)</option>
+                                          <option value="+49">+49 (DE)</option>
+                                        </select>
+                                        <input type="tel" name="phone" placeholder="Phone Number" class="form-control">
+                                      </div>
+                                    </div>
+                                    <div class="col-12">
+                                      <input type="email" name="email" placeholder="Enter your email" class="form-control" required>
+                                    </div>
+                                    <div class="col-12">
+                                      <input type="url" name="website" placeholder="Your Website (optional)" class="form-control">
+                                    </div>
+                                    <div class="col-12">
+                                      <textarea name="description" placeholder="How can we help you?" class="form-control" rows="4" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                      <button type="submit" class="btn btn-primary w-100 py-3 fw-bold rounded-pill" 
+                                         style="background: linear-gradient(45deg, var(--logo-purple), var(--logo-pink)); border: none;">
+                                         Submit
+                                      </button>
+                                    </div>
+                                  </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calendly Section -->
+                <!-- <div class="row justify-content-center mt-5">
+                    <div class="col-lg-12">
+                        <div class="glass-header">
+                            <h2 class="text-center mb-4">Or Schedule a <span class="text-gradient">Call</span></h2>
+                            <p class="text-center mb-4 text-muted">Prefer to talk directly? Book a time that works for you.</p>
+                           
+                            <div class="calendly-inline-widget" data-url="https://calendly.com/YOUR_CALENDLY_USERNAME" style="min-width:320px;height:630px;"></div>
+                            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

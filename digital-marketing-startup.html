@@ -1,0 +1,1666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Vowel – Digital Marketing Agency for Startups. We help startups grow fast with SEO, Content Marketing, Performance Ads, Social Media, Email Automation and more. Data-driven strategies built for early-stage businesses." />
+  <meta name="keywords" content="digital marketing agency for startups, SEO for startups, performance advertising, content marketing, social media marketing, IT Vowel" />
+  <meta name="author" content="IT Vowel" />
+  <meta property="og:title" content="IT Vowel | Digital Marketing for Startups" />
+  <meta property="og:description" content="Grow Fast, Grow Smart. IT Vowel helps startups find their market, attract customers and scale sustainably through smart, data-driven marketing." />
+  <meta property="og:type" content="website" />
+  <title>IT Vowel | Digital Marketing Agency for Startups – Grow Fast, Grow Smart</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href=" css/styles.css" />
+  <link rel="stylesheet" href=" css/hero.css" />
+  <script src=" js/header.js"></script>
+
+  <style>
+    :root {
+      --brand-blue: #2563eb;
+      --brand-purple: #7c3aed;
+      --brand-mid: #4f46e5;
+      --grad: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      --grad-soft: linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(124,58,237,0.08) 100%);
+      --dark: #0f0f1a;
+      --dark2: #181828;
+      --text: #e8e8f0;
+      --muted: #9090b0;
+      --card-bg: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 8px 40px rgba(37,99,235,0.18);
+      --radius: 18px;
+      --radius-sm: 10px;
+      --ff-head: 'Outfit', sans-serif;
+      --ff-body: 'DM Sans', sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--ff-head);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    
+   :root {
+            --brand-blue: #1a3a8f;
+            --brand-purple: #6b3fa0;
+            --text-gray: #555;
+            --bg-light: #f4f7fa;
+            --grad: linear-gradient(135deg, #1a3a8f 0%, #6b3fa0 100%);
+        }
+
+        body { 
+            font-family: 'Nunito', sans-serif; 
+            background: #fff; 
+            overflow-x: hidden; 
+            color: #333;
+        }
+
+        /* ── HERO SECTION ── */
+        .hero {
+            background-color: var(--bg-light);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        /* ── LOGO WATERMARK ── */
+        .hero-watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 800px;
+            opacity: 0.12; /* Visible watermark */
+            z-index: 0;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        .container { position: relative; z-index: 1; }
+
+        /* ── LEFT CONTENT ── */
+        .hero h1 { 
+            font-size: 3.5rem; 
+            font-weight: 900; 
+            line-height: 1.1; 
+            color: #222; 
+            margin-bottom: 25px; 
+        }
+        .hero h1 span { color: var(--brand-purple); }
+        
+        .hero-sub { 
+            font-size: 1.15rem; 
+            color: var(--text-gray); 
+            margin-bottom: 20px; 
+            line-height: 1.6;
+        }
+        
+
+        /* ── TRUST BAR ── */
+        .trust-bar {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #fff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .trust-icon { height: 24px; width: auto; }
+        .stars { color: var(--brand-purple); font-size: 0.85rem; }
+        .rating-text { font-size: 0.8rem; font-weight: 800; color: #666; text-transform: uppercase; }
+
+        /* ── RIGHT FORM CARD ── */
+        .form-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+            border: 2px solid #1a3a8f; 
+            position: relative;
+        }
+
+        .form-card h4 { 
+            color: var(--brand-blue); 
+            font-weight: 900; 
+            text-align: center; 
+            margin-bottom: 5px; 
+        }
+        .form-card .form-sub { 
+            text-align: center; 
+            font-size: 0.9rem; 
+            color: #777; 
+            margin-bottom: 30px; 
+        }
+
+        .form-control, .form-select {
+            padding: 14px; 
+            border-radius: 10px; 
+            margin-bottom: 18px; 
+            border: 1.5px solid #eee;
+        }
+
+        .btn-submit {
+            background: var(--grad); 
+            color: #fff; 
+            border: none; 
+            width: 100%;
+            padding: 16px; 
+            border-radius: 10px; 
+            font-weight: 800; 
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 25px rgba(26,58,143,0.3);
+        }
+
+        /* ── MOBILE RESPONSIVE ── */
+        @media (max-width: 991px) {
+            .hero-watermark {
+                top: 25%; /* Positions watermark specifically behind the top text area */
+                width: 130%; 
+                opacity: 0.15;
+            }
+            .hero { text-align: center; padding: 60px 0; }
+            .hero h1 { font-size: 2.8rem; }
+            .hero-bullets li { justify-content: center; }
+            .trust-bar { justify-content: center; }
+            .form-card { margin-top: 50px; }
+        }
+
+    /* ── SECTIONS BASE ── */
+    section { padding: 6rem 0; position: relative;background: #fff; }
+  :root {
+            --lr-blue: #1a3a8f;
+            --lr-purple: #6b3fa0;
+            --text-dark: #0f172a;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --grad: linear-gradient(135deg, #1a3a8f 0%, #6b3fa0 100%);
+        }
+
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background: #fff; }
+
+        /* ── SECTION HEADER ── */
+        .section-label {
+            background: rgba(107, 63, 160, 0.08); color: var(--lr-purple);
+            padding: 8px 18px; border-radius: 50px; font-weight: 800; font-size: 0.75rem;
+            letter-spacing: 1.2px; display: inline-block; margin-bottom: 1rem;
+        }
+
+        .text-gradient {
+            background: var(--grad);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* ── CARD DESIGN WITH BORDER HOVER ── */
+        .service-card-premium {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 28px;
+            /* Inital Light Border */
+            border: 2px solid #f1f5f9; 
+            height: 100%;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hover Effect: Border Glow and Color */
+        .service-card-premium:hover {
+            transform: translateY(-8px);
+            border-color: var(--lr-purple); /* Border color changes on hover */
+            box-shadow: 0 20px 40px -15px rgba(107, 63, 160, 0.15);
+        }
+
+        /* ── ICON BOX ── */
+        .service-icon-box {
+            width: 60px; height: 60px; background: #f1f5f9; color: var(--lr-blue);
+            border-radius: 18px; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 1.5rem;
+            transition: 0.3s ease;
+        }
+
+        .service-card-premium:hover .service-icon-box {
+            background: var(--grad);
+            color: #fff;
+        }
+
+        .service-card-premium h4 { font-weight: 800; font-size: 1.25rem; margin-bottom: 0.8rem; }
+        .service-card-premium p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+
+        /* ── BUTTON STYLING ── */
+        .card-btn {
+            margin-top: 1.5rem;
+            padding: 10px 20px;
+            border-radius: 12px;
+            border: 2px solid #f1f5f9; /* Initial border */
+            background: transparent;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            width: fit-content;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Button Hover on Card Hover */
+        .service-card-premium:hover .card-btn {
+            border-color: var(--lr-purple);
+            color: var(--lr-purple);
+        }
+
+        /* Button direct hover */
+        .card-btn:hover {
+            background: var(--lr-purple) !important;
+            color: #fff !important;
+        }
+
+        /* ── LAST ROW SPECIAL ── */
+        .last-row-card { background: #fafbff; }
+
+
+    /* ── ABOUT ── */
+ :root {
+    --lr-purple: #7b2cbf;
+    --lr-blue: #2563eb;
+    --lr-text-muted: #64748b;
+    --radius: 30px;
+    --grad: linear-gradient(135deg, #7b2cbf 0%, #2563eb 100%);
+}
+
+#about { padding: 100px 0; background-color:var(--lr-bg-light); }
+
+/* 1. Header Centered */
+.about-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(123, 44, 191, 0.1);
+    color: var(--lr-purple);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.section-titlee { 
+    font-size: clamp(2.2rem, 5vw, 3.5rem); 
+    font-weight: 800; 
+    color: #0f172a; 
+    line-height: 1.1;
+}
+
+/* 2. Equal Height Container */
+.about-row-equal {
+    display: flex;
+    align-items: stretch; /* Yeh dono columns ki height barabar karta hai */
+}
+
+.about-img-wrap { 
+    position: relative; 
+    height: 100%; /* Column ki poori height lega */
+}
+
+.about-img-box {
+    position: relative;
+    height: 100%;
+    min-height: 550px; 
+}
+
+.about-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image bina stretch huye poori height cover karegi */
+    border-radius: var(--radius);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+/* Badge Positioning */
+.about-badge {
+    position: absolute;
+    top: 30px;
+    right: -15px;
+    background: #0f172a;
+    border-radius: 20px;
+    padding: 1.2rem 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+    z-index: 4;
+}
+
+.about-badge .num {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-badge .lbl { color: #cbd5e1; font-size: 0.85rem; font-weight: 600; line-height: 1.2; }
+
+/* Right Section Alignment */
+.about-content-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Content ko image ke top aur bottom se align rakhta hai */
+    height: 100%;
+}
+
+.about-features { list-style: none; padding: 0; margin: 1.5rem 0; }
+.about-features li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.about-features li:last-child { border-bottom: none; }
+.about-features li i { color: var(--lr-purple); font-size: 1.3rem; }
+.about-features li strong { color: #0f172a; font-size: 1rem; display: block; }
+.about-features li div { font-size: 0.95rem; color: var(--lr-text-muted); line-height: 1.5; }
+
+.btn-grad {
+    background: var(--grad);
+    color: white !important;
+    padding: 16px 45px;
+    border-radius: 100px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-grad:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(123, 44, 191, 0.3); }
+
+@media (max-width: 991px) {
+    .about-row-equal { flex-direction: column; }
+    .about-img-box { min-height: 350px; margin-bottom: 30px; }
+    .about-badge { right: 10px; top: 10px; }
+}
+    /* ── PROCESS ── */
+    #process { background:#fff}
+
+    .process-step {
+      position: relative;
+      padding: 2rem;
+      background: var(--bg-light);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: transform .3s, border-color .3s;
+    }
+    .process-step:hover {
+      transform: translateY(-4px);
+      border-color: rgba(124,58,237,.4);
+    }
+    .step-num {
+      width: 44px; height: 44px;
+      background: var(--grad);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-head);
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 16px rgba(124,58,237,.35);
+    }
+    .process-step h4 { font-size: 1.25rem; color: #000; margin-bottom: .5rem; }
+    .process-step p { font-size: 1rem; color: var(--lr-text-muted); line-height: 1.6; text-align: justify;}
+
+    /* ── WHY US ── */
+:root {
+    --lr-purple: #7b2cbf;
+    --lr-blue: #2563eb;
+    --lr-bg-light: #f8fafc;
+    --lr-text-dark: #0f172a;
+    --lr-text-muted: #475569;
+}
+
+#why {
+    padding: 100px 0;
+    background-color: var(--lr-bg-light);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.section-label {
+    display: inline-flex;
+    padding: 8px 16px;
+    background: rgba(123, 44, 191, 0.1);
+    color: var(--lr-purple);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.section-titlee {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--lr-text-dark);
+}
+
+.sub-label {
+    color: var(--lr-blue);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 3rem;
+}
+
+/* Card Styling */
+.why-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--lr-purple);
+    box-shadow: 0 15px 30px rgba(123, 44, 191, 0.1);
+}
+
+.why-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, var(--lr-purple) 0%, var(--lr-blue) 100%);
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+}
+
+.why-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--lr-text-dark);
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.why-card p {
+    font-size: 0.85rem;
+    color: var(--lr-text-muted);
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.btn-card-static {
+    margin-top: auto;
+    background: rgba(37, 99, 235, 0.05);
+    color: var(--lr-blue);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+}
+
+/* Responsive Overrides */
+@media (max-width: 1200px) {
+    .row-cols-custom > * { width: 33.33%; } /* 3 cards on tablets */
+}
+
+@media (max-width: 768px) {
+    .row-cols-custom > * { width: 50%; } /* 2 cards on small screens */
+}
+
+@media (max-width: 576px) {
+    .row-cols-custom > * { width: 100%; } /* 1 card on mobile */
+
+}
+    /* ── PORTFOLIO ── */
+    :root {
+    --lr-purple: #7b2cbf;
+    --lr-blue: #2563eb;
+    --lr-text-muted: #475569;
+    --lr-dark: #0f172a;
+    --radius: 30px;
+}
+
+#why-choosee { padding: 100px 0; background-color: #ffffff; }
+
+/* Header Styling */
+.section-header-center {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.badge-lr {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 22px;
+    background: rgba(123, 44, 191, 0.08);
+    color: var(--lr-purple);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.display-h2 { 
+    font-size: clamp(2.2rem, 5vw, 3.5rem); 
+    font-weight: 800; 
+    color: var(--lr-dark); 
+    line-height: 1.1;
+}
+
+/* Feature Groups Styling */
+.feature-group {
+    position: relative;
+    padding: 2.5rem;
+    height: 100%;
+    background: #fcfcfd;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.feature-group:hover {
+    background: #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: rgba(123, 44, 191, 0.15);
+}
+
+.feature-group h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--lr-dark);
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.feature-group h3 i {
+    color: var(--lr-purple);
+    font-size: 1.8rem;
+}
+
+.feature-p {
+    font-size: 1.05rem;
+    color: var(--lr-text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: var(--lr-blue);
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    #why-choosee { padding: 60px 0; }
+    .feature-group { padding: 1.5rem; }
+}
+    /* ── approach ── */
+    :root {
+    --lr-purple: #7b2cbf;
+    --lr-blue: #2563eb;
+    --lr-text-muted: #475569;
+    --lr-dark: #0f172a;
+    --radius: 24px;
+}
+
+#our-approach { padding: 100px 0; background-color:var(--lr-bg-light) }
+
+/* Header Styling */
+.header-wrap {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.approach-badge {
+    display: inline-flex;
+    padding: 8px 20px;
+    background: rgba(37, 99, 235, 0.08);
+    color: var(--lr-blue);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.approach-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--lr-dark);
+}
+
+/* Feature Content */
+.approach-card {
+    padding: 2.5rem;
+    background: #fcfcfd;
+    border-radius: var(--radius);
+    border: 1px solid rgba(0,0,0,0.03);
+    height: 100%;
+}
+
+.approach-card h3 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--lr-dark);
+    margin-bottom: 1.5rem;
+}
+
+/* Discovery List Styling */
+.discovery-list {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.discovery-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    color: var(--lr-text-muted);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.discovery-list li:last-child { border-bottom: none; }
+
+.discovery-list li i {
+    color: var(--lr-purple);
+    font-size: 1.2rem;
+}
+
+/* Scaling Highlight */
+.scale-highlight {
+    background: linear-gradient(135deg, rgba(123, 44, 191, 0.05) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-left: 4px solid var(--lr-purple);
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+    margin-top: 1.5rem;
+}
+
+.scale-highlight p {
+    font-size: 0.95rem;
+    color: var(--lr-dark);
+    font-weight: 700;
+    margin: 0;
+}
+
+.approach-p {
+    font-size: 1.05rem;
+    color: var(--lr-text-muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    #our-approach { padding: 60px 0; }
+    .approach-card { padding: 1.5rem; }
+}/* ── CUSTOM VARIABLES (Matching your theme) ── */
+    :root {
+        --faq-bg: #0f172a; /* Deep dark background */
+        --faq-card: rgba(30, 41, 59, 0.7); /* Glassy card bg */
+        --faq-border: rgba(255, 255, 255, 0.1);
+        --faq-accent: #a78bfa; /* Purple accent */
+        --faq-text: #f8fafc;
+        --faq-muted: #94a3b8;
+    }
+
+    #faq { 
+        padding: 100px 0;
+        background: var(--faq-bg); 
+    }
+
+    /* ── ACCORDION CONTAINER ── */
+    .lr-faq-item {
+        background: var(--faq-card) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--faq-border) !important;
+        border-radius: 20px !important;
+        margin-bottom: 1rem;
+        transition: all 0.3s ease;
+        overflow: hidden;
+    }
+
+    .lr-faq-item:hover {
+        border-color: rgba(167, 139, 250, 0.4) !important;
+        transform: translateX(5px);
+    }
+
+    /* ── TRIGGER BUTTON ── */
+    .lr-faq-trigger {
+        width: 100%;
+        background: transparent !important;
+        color: var(--faq-text) !important;
+        font-weight: 700 !important;
+        font-size: 1.05rem !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 1.5rem !important;
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: color 0.3s ease;
+    }
+
+    .lr-faq-trigger:not(.collapsed) {
+        color: var(--faq-accent) !important;
+    }
+
+    /* Custom Plus/Minus Icon */
+    .lr-faq-trigger::after {
+        content: '+';
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 1.5rem;
+        line-height: 1;
+        transition: transform 0.4s ease;
+        color: var(--faq-accent);
+    }
+
+    .lr-faq-trigger:not(.collapsed)::after {
+        content: '−';
+        transform: rotate(180deg);
+    }
+
+    /* ── ACCORDION CONTENT ── */
+    .lr-faq-body {
+        background: transparent !important;
+        color: var(--faq-muted);
+        font-size: 0.95rem;
+        padding: 0 1.5rem 1.5rem 1.5rem !important;
+        line-height: 1.7;
+    }
+
+    /* Section Label Matching Previous Style */
+    .section-label {
+        background: rgba(167, 139, 250, 0.1);
+        color: var(--faq-accent);
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-weight: 800;
+        font-size: 0.75rem;
+        letter-spacing: 1.2px;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+    /* ── CONTACT ── */
+   :root {
+    --lr-purple: #7b2cbf;
+    --lr-blue: #2563eb;
+    --lr-dark: #0f172a;
+    --lr-soft-bg: #f8fafc;
+    --lr-gradient: linear-gradient(135deg, #7b2cbf 0%, #2563eb 100%);
+}
+
+#growth-section {
+    padding: 80px 0;
+    background-color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--lr-dark);
+}
+
+/* Centered Header Styling */
+.header-container-lr {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.badge-lr {
+    display: inline-flex;
+    padding: 8px 18px;
+    background: rgba(123, 44, 191, 0.08);
+    border-radius: 100px;
+    color: var(--lr-purple);
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.headline-lr {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.text-gradient {
+    background: var(--lr-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Left Content Styling */
+.side-border-text {
+    border-left: 4px solid var(--lr-blue);
+    padding-left: 25px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--lr-dark);
+    margin-bottom: 40px;
+}
+
+.description-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 30px;
+}
+
+.mission-box {
+    background: #f9faff;
+    border-left: 5px solid var(--lr-purple);
+    padding: 35px;
+    border-radius: 0 20px 20px 0;
+}
+
+.mission-box p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Right Card Styling */
+.feature-card-lr {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    height: 100%;
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: var(--lr-gradient);
+    color: white;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+/* CTA Bar */
+.cta-footer {
+    margin-top: 60px;
+    background: var(--lr-dark);
+    border-radius: 30px;
+    padding: 40px;
+}
+
+.btn-growth {
+    background: var(--lr-gradient);
+    color: white !important;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-growth:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(123, 44, 191, 0.3); }
+
+@media (max-width: 991px) {
+    .side-border-text { font-size: 1.1rem; }
+    .mission-box { padding: 25px; }
+}
+    
+
+    /* ── DIVIDER ── */
+    .grad-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--brand-purple), transparent);
+      opacity: .3;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 767px) {
+      .hero-stats { gap: 1.5rem; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { width: 100%; text-align: center; }
+      .about-badge { position: static; margin-top: 1rem; display: inline-flex; }
+      section { padding: 4rem 0; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="header"></div>
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+    <img src="images/logo-removebg-preview.png" alt="Watermark" class="hero-watermark">
+
+    <div class="container">
+        <div class="row align-items-center">
+            
+            <div class="col-lg-7">
+                <h1>Digital Marketing for Startup: <span>Grow Fast, Grow Smart</span></h1>
+                
+                <p class="hero-sub">
+                    Every startup begins with a big idea — but turning that idea into a successful business requires more than just innovation. It needs visibility, credibility and consistent customer acquisition. That’s where digital marketing for startups comes in.
+                </p>
+
+                <p class="hero-sub">
+                    At <strong>Long Radius</strong>, we help startups find their market, attract customers and grow sustainably through smart, data-driven marketing. Our approach is simple: we help you go from <strong>“idea” to “impact”</strong>.
+                </p>
+
+              
+                <p class="hero-sub" style="font-style: italic; border-left: 4px solid var(--brand-purple); padding-left: 15px;">
+                    Startups can’t afford to waste resources on traditional marketing models that don’t deliver. You need speed, flexibility and precision — and that’s what we provide.
+                </p>
+
+                <div class="trust-bar">
+                    <div class="trust-item">
+                        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" class="trust-icon" alt="Google">
+                        <div>
+                            <div class="stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                            <span class="rating-text">4.3 RATING</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="form-card">
+                    <h4>GET STARTED NOW</h4>
+                    <p class="form-sub">And Get FREE Website & Market Analysis</p>
+                    
+                    <form action="#">
+                        <input type="text" class="form-control" placeholder="Full Name" required>
+                        <input type="email" class="form-control" placeholder="Work Email" required>
+                        
+                        <div class="row g-2 mb-0">
+                            <div class="col-4">
+                                <select class="form-select">
+                                    <option value="+91">+91 (IN)</option>
+                                    <option value="+1">+1 (US)</option>
+                                    <option value="+44">+44 (UK)</option>
+                                    <option value="+1">+1 (CA)</option>
+                                </select>
+                            </div>
+                            <div class="col-8">
+                                <input type="tel" class="form-control" placeholder="Mobile Number" required>
+                            </div>
+                        </div>
+                        
+                        <textarea class="form-control" rows="3" placeholder="Tell us about your startup goals..."></textarea>
+                        
+                        <button type="submit" class="btn-submit">
+                            SEND MESSAGE 
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════ SERVICES ══════════════ -->
+<section id="services">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-label">Our Expertise</span>
+            <h2 class="fw-black display-5">Core Services:  <span class="text-gradient">What We Do for You
+</span></h2>
+      <p class="section-desc mx-auto">Long Radius offers a full suite of digital marketing services for startup growth. Each service builds on the next to form a complete growth machine.</p>
+
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-search"></i></div>
+                    <h4>Search Engine Optimization (SEO)</h4>
+                    <p>We build your organic presence from the ground up with targeted keywords, optimized content and clean technical foundations. SEO gets you found by people searching for your product or service.
+</p>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-pencil-square"></i></div>
+                    <h4>Content Marketing</h4>
+                    <p>Storytelling connects — and connection converts. We create blog content, landing page copy and digital assets that educate, engage and convert. Content is not just words — it’s how you communicate your vision and value.
+</p>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-megaphone-fill"></i></div>
+                    <h4> Performance Advertising</h4>
+                    <p>We plan and execute ROI focused campaigns on Google, Meta, LinkedIn and other key platforms. Our data driven paid ads help you reach precise audiences and optimize ad spend for maximum return.</p>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-share-fill"></i></div>
+                    <h4>Social Media Marketing</h4>
+                    <p>We help startups build meaningful relationships through social media. From crafting engaging posts to running influencer collaborations, our social media marketing amplifies your brand’s voice and community engagement.
+</p>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-envelope-fill"></i></div>
+                    <h4>Email & Automation</h4>
+                    <p>Startups often overlook the power of email. We design automated workflows that nurture leads, onboard new users and re-engage existing customers — maximizing your conversion opportunities at every stage.</p>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <article class="service-card-premium">
+                    <div class="service-icon-box"><i class="bi bi-bar-chart-line-fill"></i></div>
+                    <h4> Analytics & Growth Tracking</h4>
+                    <p>We set up advanced analytics dashboards to track your progress in real time. You’ll know exactly where your customers come from, what campaigns convert and where to optimize next.</p>
+                </article>
+            </div>
+
+            <div class="col-lg-6">
+                <article class="service-card-premium last-row-card">
+                    <div class="d-md-flex align-items-center gap-4">
+                        <div class="service-icon-box mb-3 mb-md-0"><i class="bi bi-funnel-fill"></i></div>
+                        <div>
+                            <h4>Conversion Rate Optimization (CRO)</h4>
+                            <p class="mb-0">We audit your website and funnels to eliminate friction and improve the user experience. Small changes in layout, copy or flow can make big differences in conversion.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-6">
+                <article class="service-card-premium last-row-card">
+                    <div class="d-md-flex align-items-center gap-4">
+                        <div class="service-icon-box mb-3 mb-md-0"><i class="bi bi-rocket-takeoff-fill"></i></div>
+                        <div>
+                            <h4>Growth Hacking</h4>
+                            <p class="mb-0">When you need rapid growth we think beyond conventional marketing. Referral programs, viral content strategies and community driven engagement help your startup grow faster with less resources.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+    <div class="container">
+        <div class="about-header">
+            <span class="section-label"></i> About IT Vowel</span>
+            <h2 class="section-titlee">
+                Why We’re the Best <span style="color: var(--lr-purple)">Digital Marketing Agency</span> for Startups
+            </h2>
+        </div>
+
+        <div class="row g-5 about-row-equal">
+            <div class="col-lg-6">
+                <div class="about-img-wrap">
+                    <div class="about-badge">
+                        <span class="num">8+</span>
+                        <div class="lbl">Years of<br>Growth Experience</div>
+                    </div>
+                    <div class="about-img-box">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2070&auto=format&fit=crop" 
+                             alt="Digital Growth Team" 
+                             class="about-main-img">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-content-col ps-lg-4">
+                    <div>
+                        <p style="color:var(--lr-text-muted); font-size: 1.1rem; margin-bottom:1rem">
+Startups choose Long Radius because we understand growth from the inside out. Being the best digital marketing agency for startups isn’t about offering generic services — it’s about providing clarity, speed, and measurable success.
+                        </p>
+                        <p style="color:var(--lr-text-muted); font-size: 1.1rem; margin-bottom:1.5rem">
+                            We know what it takes to go from an idea on a whiteboard to real traction in the marketplace. Our execution enables startups to compete with giants.
+                        </p>
+
+                        <ul class="about-features">
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <div><strong>Founder-Focused Partnership</strong>We collaborate directly with founders to align goals with business vision.</div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <div><strong>Transparent Reporting</strong>Always know how your budget is being used and what's delivering real ROI.</div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <div><strong>Agile Execution</strong>Pivot campaigns quickly based on performance data and feedback.</div>
+                            </li>
+                            <li>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <div><strong>Comprehensive Support</strong>Everything from strategy to design happens under one roof.</div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-grad">
+                        Partner With Us <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ══════════════ PROCESS ══════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label"><i class="bi bi-diagram-3-fill"></i> Our Process</span>
+      <h2 class="section-titlee">How We Wrok : <span style="color: var(--lr-purple)">From Launch to Growth
+</span></h2>
+      <p class="section-desc mx-auto">We break our marketing work down into 4 key steps that make marketing simpler, predictable and scalable for your startup.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h4>Discovery & Planning</h4>
+          <p>We learn all about your business — what makes it tick, who your target audience is and what you want to achieve. Market research, competitive analysis and defining the right metrics to track.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h4>Launch & Test</h4>
+          <p>We run pilot campaigns across different channels. We test creatives, ad formats, landing pages and messaging — collecting valuable data to identify early successes and opportunities.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h4>Scale & Optimize</h4>
+          <p>We scale what's working while fine-tuning conversion funnels and cost efficiency. Audience segments, ad spend placement and content timing are all optimized for maximum ROI.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h4>Sustain & Expand</h4>
+          <p>Focus shifts to long-term brand building — nurturing customer relationships, encouraging referrals and driving consistent growth. We prepare you for in-house systems when the time is right.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ WHY CHOOSE US ══════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label"><i class="bi bi-award-fill me-2"></i> Why Choose Us</span>
+      <h2 class="section-titlee">Why Startups Must Invest in <span style="color: var(--lr-purple)">Digital Marketing</span></h2>
+      <p class="section-desc mx-auto mt-3 text-muted" style="max-width: 800px;">
+        In today’s digital economy, visibility is everything. Even a great product fails if nobody knows it exists.
+      </p>
+      <span class="sub-label mt-2">Here’s what digital marketing can do for your startup:</span>
+    </div>
+
+   <div class="row g-3 row-cols-custom justify-content-center">
+      
+      <div class="col">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-trophy"></i></div>
+          <h5>Level the Playing Field</h5>
+          <p>Compete with established brands using data-driven strategies.</p>
+        </div>
+      </div>
+      
+      <div class="col">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-bullseye"></i></div>
+          <h5>Reach the Right Audience</h5>
+          <p>Target customers precisely, based on intent and behavior.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <h5>Build Brand Credibility</h5>
+          <p>Establish trust through consistent digital presence.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-funnel"></i></div>
+          <h5>Generate Qualified Leads</h5>
+          <p>Turn engagement into conversions through targeted funnels.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h5>Measure and Improve</h5>
+          <p>Track everything, adjust fast, and optimize for results.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  </div>
+</section>
+
+<section id="why-choosee">
+    <div class="container">
+        <div class="section-header-center">
+            <span class="badge-lr"><i class="bi bi-patch-check-fill"></i> We Focused</span>
+            <h2 class="display-h2">The Strategic Partner <br><span style="color: var(--lr-purple)">Your Startup Needs</span></h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-lg-6">
+                <div class="feature-group">
+                    <h3><i class="bi bi-lightning-charge-fill"></i> Built for Early-Stage Agility</h3>
+                    <p class="feature-p">
+                        Startups can’t wait months for results. They need traction fast. As a digital marketing agency for startups, we design growth systems that balance experimentation with execution.
+                    </p>
+                    <p class="feature-p">
+                        We study your market, understand your ideal customer and build marketing funnels that convert interest into loyal customers. Our campaigns are lean, optimized and focused on ROI from day one.
+                    </p>
+                    <p class="feature-p mb-0">
+                        When we work with founders we align our goals with theirs — every campaign is designed with startup realities in mind: limited budget and the need to prove value quickly.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-group">
+                    <h3><i class="bi bi-graph-up-arrow"></i> Growth-Driven Strategies</h3>
+                    <p class="feature-p">
+                        Our marketing team doesn’t just promote your brand — we build growth loops that work for you. We use a mix of organic and paid to get you everywhere, whether you’re targeting B2B decision makers or consumers.
+                    </p>
+                    <p class="feature-p">
+                        We weave your product story into every digital touchpoint. From your website’s first impression to repeat purchase, we make sure your brand voice is consistent and loud.
+                    </p>
+                    <p class="feature-p mb-0 highlight-text">
+                        <i class="bi bi-shield-check me-2 fs-4"></i> This is what sets us apart — we’re your long term growth partner.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- ══════════════ our approach ══════════════ -->
+<section id="our-approach">
+    <div class="container">
+        <div class="header-wrap">
+            <span class="approach-badge"><i class="bi bi-gear-wide-connected me-2"></i> Our Approach</span>
+            <h2 class="approach-title">Digital Marketing Strategies for <span style="color: var(--lr-purple)">Small Business Startups</span></h2>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="approach-card">
+                    <h3>Data-Backed Strategy Meets Startup Speed</h3>
+                    <p class="approach-p">
+                        Startups thrive when every move is intentional. Our digital marketing for small business startups is built around measurable outcomes and rapid execution.
+                    </p>
+                    
+                    <p class="fw-bold text-dark mt-4 mb-2">We start with a discovery phase that includes:</p>
+                    <ul class="discovery-list">
+                        <li><i class="bi bi-check2-circle"></i> Audience and competitor analysis</li>
+                        <li><i class="bi bi-check2-circle"></i> Brand positioning review</li>
+                        <li><i class="bi bi-check2-circle"></i> Messaging and content direction</li>
+                        <li><i class="bi bi-check2-circle"></i> Defining short-term and long-term goals</li>
+                    </ul>
+                    
+                    <p class="approach-p mt-3">
+                        Then we develop a channel-specific strategy — where your customers spend their time online and how to reach them.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="approach-card">
+                    <h3>Test, Learn, and Scale</h3>
+                    <p class="approach-p">
+                        Once we launch your campaigns we closely monitor engagement and conversion metrics to see what’s working. We test creatives, messaging and targeting to improve performance.
+                    </p>
+                    
+                    <div class="scale-highlight">
+                        <p>This testing cycle allows us to make quick decisions — doubling down on what’s working and eliminating waste.</p>
+                    </div>
+
+                    <p class="approach-p mt-4">
+                        By following these digital marketing for small business startups we ensure every dollar spent moves your business forward with measurable results.
+                    </p>
+                    
+                    <div class="mt-4 pt-3 d-flex align-items-center gap-3">
+                        <div style="width: 50px; height: 2px; background: var(--lr-purple);"></div>
+                        <span class="fw-bold small text-uppercase" style="color: var(--lr-purple); letter-spacing: 1px;">Growth Ready Execution</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <span class="section-label"><i class="bi bi-patch-question"></i> FAQ</span>
+          <h2 class="display-5 fw-bold" style="color: #fff;">Got Questions? <br><span style="color: var(--faq-accent);">We Have Answers.</span></h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+          
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                What makes us different for startups?
+              </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">
+                Unlike generalist agencies, we understand early-stage constraints. We treat your advertising budget like startup capital—focused experiments, fast pivots, and scaling when the signal is strong.
+              </div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                What kind of budgets do you work with?
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">
+                We've run pilot campaigns with budgets as low as ₹25,000/month and scaled to multi-lakhs. Our strategies adapt to your scale.
+              </div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                How soon will I see results?
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">
+                You may see initial traffic or leads within a few weeks. But real traction (conversion lift, retention) often begins in months 2–4 as we iterate and optimize.
+              </div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                Do you lock clients into long contracts?
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">
+                We prefer short-term, trial-based arrangements initially. If we deliver value, we’ll grow together without forcing you into long-term locks.
+              </div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                What industries do you specialize in?
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">
+We’ve worked across SaaS, fintech, e-commerce, B2B, consumer apps, edtech, and more. Our playbooks generalize across verticals.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CONTACT ══════════════ -->
+<section id="growth-section">
+    <div class="container">
+        
+        <div class="header-container-lr">
+            <span class="badge-lr">Long Radius Agency</span>
+            <h2 class="headline-lr">
+                Get A Growth Partner <br>
+                <span class="text-gradient">You Can Rely On</span>
+            </h2>
+        </div>
+
+        <div class="row g-5 align-items-center">
+            
+            <div class="col-lg-6">
+                <div class="side-border-text">
+                    At Long Radius, we believe every startup deserves a strong digital presence — one that attracts, converts and retains customers efficiently.
+                </div>
+                
+                <p class="description-text">
+                    Our digital marketing for startups expertise allows us to create strategies that balance <strong>creativity with performance</strong>. We don’t just manage campaigns; we manage growth.
+                </p>
+
+                <div class="mission-box">
+                    <p>"The digital landscape changes fast but our mission remains the same: help startups grow smarter, faster, stronger."</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="feature-card-lr">
+                    <div class="icon-circle">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">Founder-Centric Mindset</h3>
+                    <p class="description-text mb-4">
+                        As your digital marketing agency for startups, we make sure every action — from your SEO setup to your ad strategy — aligns with your business goals and budget.
+                    </p>
+                    <hr class="my-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="text-primary fs-4"><i class="bi bi-graph-up-arrow"></i></div>
+                        <p class="mb-0 fw-bold">From early traction to market leadership, we drive results through data.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="cta-footer shadow-lg mt-5">
+            <div class="row align-items-center text-center text-lg-start">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h3 class="text-white fw-bold h4 mb-2">Ready to take your startup to the next level?</h3>
+                    <p class="text-white-50 mb-0">Long Radius is the partner you’ve been looking for. Let’s turn vision into results.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="tel:+919041381102 " class="btn-growth">
+                        <i class="bi bi-telephone"></i> Start Your Journey
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ══════════════ FOOTER ══════════════ -->
+<div id="footer"></div>
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Sticky navbar scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+
+  // Animate bar fills on hero visibility
+  const heroObserver = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      document.querySelectorAll('.bar-fill').forEach(b => {
+        const w = b.style.width; b.style.width = '0';
+        setTimeout(() => { b.style.width = w; }, 300);
+      });
+    }
+  }, { threshold: 0.5 });
+  const heroEl = document.getElementById('home');
+  if (heroEl) heroObserver.observe(heroEl);
+
+  // Scroll reveal animation
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.service-card, .process-step, .why-card, .portfolio-card, .testi-card, .accordion-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity .5s ease, transform .5s ease';
+    revealObserver.observe(el);
+  });
+
+  // Contact form
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const msg = document.getElementById('contactMsg').value.trim();
+    if (!name || !email || !msg) return;
+    const btn = this.querySelector('button[type=submit]');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = 'Send Message <i class="bi bi-send-fill ms-1"></i>';
+      document.getElementById('formSuccess').style.display = 'block';
+      this.reset();
+      setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
+    }, 1800);
+  });
+
+  // Close mobile menu on link click
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const toggler = document.querySelector('.navbar-toggler');
+      const menu = document.getElementById('navMenu');
+      if (menu.classList.contains('show')) toggler.click();
+    });
+  });
+</script>
+</body>
+</html>
