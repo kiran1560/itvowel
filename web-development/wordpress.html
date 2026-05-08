@@ -289,108 +289,116 @@ Expand your services and maintain a strong presence in the digital world.
   </div>
 </section>
 
-<section class="results-section py-5">
-<div class="container">
-
-    <!-- TITLE -->
-    <div class="text-center mb-4">
-        <h2 class="results-title">THE RESULTS</h2>
-        <p class="results-desc">
-            25% increase in NYC listing detail page position 1 keywords, 
-            10% increase in NYC listing detail page 1 keywords, 
-            majority ranking above competitors.
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="portfolio-title fs-1">Our Portfolio</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+            We specialize in creating high-performance, visually stunning websites and custom software solutions designed to scale your business.
         </p>
     </div>
 
-    <!-- STATS -->
-    <div class="row g-4 text-center mb-5">
+    <!-- Cards Container -->
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="portfolio-grid">
+        <!-- JS will inject 6 cards here -->
+    </div>
+</div>
 
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <div class="stat-number">46%</div>
-                <div class="stat-text">Hamptons Position 1 Keywords</div>
+<!-- Reusable Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="m-title" style="color: var(--main-color);">Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0 text-center" id="modalBody">
+                <!-- Content (Img/PDF) injected by JS -->
             </div>
         </div>
+    </div>
+</div>
 
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <div class="stat-number">12%</div>
-                <div class="stat-text">Hamptons Page 1 Keywords</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1. Data with Headings and Descriptions
+     const projects = [
+        { 
+            title: "Varun-Real-Estate", 
+            img: "../images/Des1.png", 
+            file: "../images/Des1.png",
+            desc: "Discover premium residential and commercial properties designed for modern living. We provide trusted real estate solutions with elegant designs, prime locations, and exceptional investment opportunities tailored to your lifestyle and business needs."
+        },
+        { 
+            title: "Ag Tutoring", 
+            img: "../images/Des2.png", 
+            file: "../images/Des2.png",
+            desc: "AG Tutoring provides expert online and in-person tutoring to help students achieve academic success with personalized learning and guidance."
+        },
+        { 
+            title: "New Northern Travels", 
+            img: "../images/Des4.png", 
+            file: "../images/Des4.png",
+            desc: "Providing comfortable and affordable bus travel solutions with modern amenities, online ticket booking, luxury coaches, and routes connecting major cities for safe and convenient journeys."
+        },
+        { 
+            title: "RNKIndospan", 
+            img: "../images/Des5.png", 
+            file: "../images/Des5.png",
+            desc: "RNK Indospan is a professionally managed rice trading and export company specializing in sourcing, processing, and supplying premium quality Indian rice to domestic and international markets."
+        },
+        { 
+            title: "AM RC Inc", 
+            img: "../images/Des6.png", 
+            file: "../images/Des6.png",
+            desc: " AMRC Inc is to be the preferred manufacturing partner for global High Fashion apparel brands by offering reliable, scalable and innovative garment production solutions. "
+        },
+        { 
+            title: "Faisal Kabab Hut", 
+            img: "../images/Desgin3.png", 
+            file: "../images/Desgin3.png",
+            desc: "Experience the rich flavors of Faisal Kabab Hut, the premier destination for authentic Pakistani dishes in Calgary. Kababs, biryani & other Pakistani specialties plated in a quaint restaurant with old-school decor."
+        }
+    ];
+    // 2. Generate cards dynamically
+    const grid = document.getElementById('portfolio-grid');
+    projects.forEach((item) => {
+        grid.innerHTML += `
+            <div class="col">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <div class="screenshot-card" onclick="openModal('${item.file}', '${item.title}')">
+                        <img src="${item.img}" alt="${item.title}">
+                    </div>
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2" style="color: #222;">${item.title}</h5>
+                        <p class="text-muted service-desc px-2">${item.desc}</p>
+                       
+                    </div>
+                </div>
             </div>
-        </div>
+        `;
+    });
 
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <div class="stat-number">125%</div>
-                <div class="stat-text">FL Position 1 Keywords</div>
-            </div>
-        </div>
-
-        <div class="col-6 col-md-3">
-            <div class="stat-box">
-                <div class="stat-number">85%</div>
-                <div class="stat-text">FL Page 1 Keywords</div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- PROJECTS (2 PER ROW) -->
-   <div class="row mt-4 g-4">
-
-    <div class="col-md-4">
-        <div class="project-card">
-            <img src="../images/result1.jpeg" class="project-img img-fluid"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</h6>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="project-card">
-            <img src="../images/resu2.jpeg" class="project-img img-fluid"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</h6>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="project-card">
-            <img src="../images/rest3.jpeg" class="project-img img-fluid"
-                 data-bs-toggle="modal"
-                 data-bs-target="#imageModal"
-                 onclick="showImage(this.src)">
-            <h6 class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit</h6>
-        </div>
-    </div>
-
-</div>
-<!-- MODAL -->
-<div class="modal fade" id="imageModal" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content border-0 bg-transparent">
-      <div class="modal-body text-center p-0">
-        <img id="modalImage" class="img-fluid rounded">
-      </div>
-    </div>
-  </div>
-</div>
- <!-- CTA Button -->
-    <div class="text-center">
-        <a href="#" class="cta-btn mt-5">Connect With an Expert</a>
-    </div>
-
-</div>
-
-    </div>
-
-</div>
-</div>
-</section>
+    // 3. Modal logic
+    function openModal(fileUrl, title) {
+        const body = document.getElementById('modalBody');
+        document.getElementById('m-title').innerText = title;
+        
+        // Loader logic
+        body.innerHTML = '<div class="p-5 text-muted">Loading preview...</div>';
+        
+        setTimeout(() => {
+            if (fileUrl.toLowerCase().endsWith('.pdf')) {
+                body.innerHTML = `<iframe src="${fileUrl}" width="100%" height="75vh" style="border:none;"></iframe>`;
+            } else {
+                body.innerHTML = `<img src="${fileUrl}" class="img-fluid w-100 shadow">`;
+            }
+        }, 300);
+        
+        const myModal = new bootstrap.Modal(document.getElementById('previewModal'));
+        myModal.show();
+    }
+</script>
 
 
 <section class="services-clone">
