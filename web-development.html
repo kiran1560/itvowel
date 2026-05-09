@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="IT Vowel – Web Development Agency for Startups. We build fast, scalable websites and web apps for early-stage businesses. Bootstrap 5, WordPress, Custom Software and more." />
+  <meta name="keywords" content="web development agency for startups, custom website development, WordPress development, IT Vowel" />
+  <meta name="author" content="IT Vowel" />
+  <title>IT Vowel | Web Development Agency for Startups – Build Fast, Build Smart</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/hero.css">
+<script src="js/header.js"></script>
+<script src="js/script.js">
+</script>
+  <style>
+    /* ══════════════ ROOT VARIABLES ══════════════ */
+    :root {
+      --brand-blue: #1a3a8f;
+      --brand-purple: #6b3fa0;
+      --brand-mid: #4f46e5;
+      --grad: linear-gradient(135deg, #1a3a8f 0%, #6b3fa0 100%);
+      --grad-soft: linear-gradient(135deg, rgba(26,58,143,0.08) 0%, rgba(107,63,160,0.08) 100%);
+      --dark: #0f172a;
+      --dark2: #181828;
+      --text: #e8e8f0;
+      --muted: #9090b0;
+      --bg-light: #f4f7fa;
+      --bg-white: #ffffff;
+      --text-dark: #0f172a;
+      --text-muted: #475569;
+      --text-gray: #555;
+      --card-bg: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --shadow: 0 8px 40px rgba(26,58,143,0.18);
+      --radius: 24px;
+      --radius-sm: 12px;
+      --ff-head: 'Outfit', sans-serif;
+      --ff-body: 'DM Sans', sans-serif;
+      --faq-bg: #0f172a;
+      --faq-card: rgba(30,41,59,0.7);
+      --faq-accent: #a78bfa;
+      --faq-text: #f8fafc;
+      --faq-muted: #94a3b8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--bg-white);
+      color: var(--text-dark);
+      overflow-x: hidden;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--ff-head);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    section { padding: 6rem 0; position: relative; background: var(--bg-white); }
+/* ══════════════ HERO ══════════════ */
+/* ══════════════ HERO ══════════════ */
+
+   :root {
+            --brand-blue: #1a3a8f;
+            --brand-purple: #6b3fa0;
+            --grad: linear-gradient(135deg, #1a3a8f 0%, #6b3fa0 100%);
+            --ff-body: 'Plus Jakarta Sans', sans-serif;
+        }
+
+
+        /* ══════════════ HERO ══════════════ */
+        .hero {
+            background-image: 
+                linear-gradient(135deg, rgba(26, 58, 143, 0.88) 0%, rgba(107, 63, 160, 0.82) 100%),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .badge-new {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #dccfff;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #dccfff;
+            text-shadow: 0 0 20px rgba(173, 122, 255, 0.5);
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            background: #fff;
+            color: var(--brand-blue);
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            color: var(--brand-purple);
+        }
+
+        .btn-outline {
+            border: 2px solid rgba(255,255,255,0.4);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: #fff;
+        }
+
+        /* ════ TRUST BAR ════ */
+        .trust-bar {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .trust-pill {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        .pill-val { font-weight: 800; font-size: 0.9rem; color: #fff; margin-right: 5px; }
+        .pill-label { font-size: 0.7rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; }
+        .stars { color: #ffc107; font-size: 0.75rem; }
+        .text-accent-blue { color: #3b82f6; }
+        .text-accent-purple { color: #a855f7; }
+
+        /* ════ VISUAL SIDE (FORM CARD) ════ */
+        .hero-visual-wrapper {
+            position: relative;
+            padding: 20px;
+        }
+
+        .main-visual-card {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 35px;
+            padding: 50px 35px 40px 35px !important; /* Fixed padding for alignment */
+            box-shadow: 0 40px 100px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .card-header-dots {
+            display: flex;
+            gap: 8px;
+            position: absolute;
+            top: 25px;
+            left: 30px;
+        }
+
+        .card-header-dots span {
+            width: 10px; height: 10px; border-radius: 50%;
+        }
+
+        .visual-title {
+            font-weight: 800;
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+            color: #fff;
+        }
+
+        /* ════ GLASS FORM ════ */
+        .glass-form .form-control, 
+        .glass-form .form-select {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            color: #fff;
+            padding: 14px 18px;
+            font-size: 0.95rem;
+            transition: 0.3s ease;
+        }
+
+        .glass-form .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .glass-form .form-control:focus, 
+        .glass-form .form-select:focus {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: var(--brand-purple);
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.25);
+            outline: none;
+            color: #fff;
+        }
+
+        .glass-form .form-select option {
+            background: #0f172a;
+            color: #fff;
+        }
+
+        .btn-neon-submit {
+            background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 100%);
+            color: #fff;
+            width: 100%;
+            padding: 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .btn-neon-submit:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+            box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);
+        }
+
+        @media (max-width: 991px) {
+            .hero { text-align: center; padding: 80px 0; }
+            .hero-sub { margin-left: auto; margin-right: auto; }
+            .hero-btns, .trust-bar { justify-content: center; }
+            .main-visual-card { padding: 40px 20px !important; margin-top: 30px; }
+        }
+    /* ══════════════ SECTION COMMON ══════════════ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 20px;
+      background: rgba(107,63,160,0.1);
+      color: var(--brand-purple);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      letter-spacing: 0.5px;
+    }
+    .section-titlee {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.15;
+    }
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .text-gradient {
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .btn-grad {
+      background: var(--grad);
+      color: white !important;
+      padding: 14px 40px;
+      border-radius: 100px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      border: none;
+      text-decoration: none;
+      transition: 0.3s ease;
+      font-family: var(--ff-head);
+    }
+    .btn-grad:hover { transform: translateY(-4px); box-shadow: 0 10px 25px rgba(107,63,160,0.3); }
+
+    /* ══════════════ SERVICES ══════════════ */
+    #services { background: var(--bg-white); }
+    .service-card-premium {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 28px;
+      border: 2px solid #f1f5f9;
+      height: 100%;
+      position: relative;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .service-card-premium:hover {
+      transform: translateY(-8px);
+      border-color: var(--brand-purple);
+      box-shadow: 0 20px 40px -15px rgba(107,63,160,0.15);
+    }
+    .service-icon-box {
+      width: 60px;
+      height: 60px;
+      background: #f1f5f9;
+      color: var(--brand-blue);
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: 0.3s ease;
+    }
+    .service-card-premium:hover .service-icon-box {
+      background: var(--grad);
+      color: #fff;
+    }
+    .service-card-premium h4 { font-weight: 800; font-size: 1.2rem; margin-bottom: 0.8rem; color: var(--text-dark); }
+    .service-card-premium p { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; flex-grow: 1; }
+    .card-btn {
+      margin-top: 1.5rem;
+      padding: 10px 20px;
+      border-radius: 12px;
+      border: 2px solid #f1f5f9;
+      background: transparent;
+      color: var(--text-dark);
+      font-weight: 700;
+      font-size: 0.85rem;
+      transition: all 0.3s ease;
+      width: fit-content;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--ff-head);
+    }
+    .service-card-premium:hover .card-btn { border-color: var(--brand-purple); color: var(--brand-purple); }
+    .card-btn:hover { background: var(--brand-purple) !important; color: #fff !important; }
+    .last-row-card { background: #fafbff; }
+
+    /* ══════════════ ABOUT ══════════════ */
+    #about { padding: 100px 0; background-color: var(--bg-light); }
+    .about-header {
+      text-align: center;
+      margin-bottom: 60px;
+      max-width: 850px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .about-row-equal { display: flex; align-items: stretch; }
+    .about-img-box {
+      position: relative;
+      height: 100%;
+      min-height: 550px;
+    }
+    .about-main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 30px 60px rgba(15,23,42,0.12);
+    }
+    .about-badge {
+      position: absolute;
+      top: 30px;
+      right: -15px;
+      background: #0f172a;
+      border-radius: 20px;
+      padding: 1.2rem 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      z-index: 4;
+    }
+    .about-badge .num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: var(--grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: var(--ff-head);
+    }
+    .about-badge .lbl { color: #cbd5e1; font-size: 0.85rem; font-weight: 600; line-height: 1.2; }
+    .about-content-col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+    .about-features { list-style: none; padding: 0; margin: 1.5rem 0; }
+    .about-features li {
+      display: flex;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #f1f5f9;
+    }
+    .about-features li:last-child { border-bottom: none; }
+    .about-features li i { color: var(--brand-purple); font-size: 1.3rem; flex-shrink: 0; }
+    .about-features li strong { color: var(--text-dark); font-size: 1rem; display: block; }
+    .about-features li div { font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; }
+
+    /* ══════════════ PROCESS ══════════════ */
+    #process { background: var(--bg-white); }
+    .process-step {
+      position: relative;
+      padding: 2rem;
+      background: var(--bg-light);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      transition: transform 0.3s, border-color 0.3s;
+      height: 100%;
+    }
+    .process-step:hover { transform: translateY(-4px); border-color: rgba(107,63,160,.4); }
+    .step-num {
+      width: 44px; height: 44px;
+      background: var(--grad);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--ff-head);
+      font-weight: 800;
+      font-size: 1rem;
+      color: #fff;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 16px rgba(107,63,160,.35);
+    }
+    .process-step h4 { font-size: 1.2rem; color: var(--text-dark); margin-bottom: .5rem; }
+    .process-step p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; text-align: justify; }
+
+    /* ══════════════ WHY INVEST ══════════════ */
+    #why { padding: 100px 0; background-color: var(--bg-light); }
+    .why-card {
+      background: #ffffff;
+      padding: 1.8rem;
+      border-radius: 20px;
+      height: 100%;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s ease;
+    }
+    .why-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--brand-purple);
+      box-shadow: 0 15px 30px rgba(107,63,160,0.1);
+    }
+    .why-icon {
+      width: 50px; height: 50px;
+      background: var(--grad);
+      color: white;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+    .why-card h5 { font-size: 1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 0.6rem; }
+    .why-card p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; }
+    .sub-label { color: var(--brand-blue); font-weight: 700; display: block; margin-bottom: 2rem; font-size: 1rem; }
+
+    /* ══════════════ STRATEGIC PARTNER ══════════════ */
+    #why-choosee { padding: 100px 0; background-color: var(--bg-white); }
+    .section-header-center { text-align: center; margin-bottom: 60px; max-width: 850px; margin-left: auto; margin-right: auto; }
+    .badge-lr {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 22px;
+      background: rgba(107,63,160,0.08);
+      color: var(--brand-purple);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .display-h2 { font-size: clamp(2.2rem, 5vw, 3.3rem); font-weight: 800; color: var(--text-dark); line-height: 1.15; }
+    .feature-group {
+      position: relative;
+      padding: 2.5rem;
+      height: 100%;
+      background: #fcfcfd;
+      border-radius: 24px;
+      border: 1px solid rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+    .feature-group:hover {
+      background: #ffffff;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+      border-color: rgba(107,63,160,0.15);
+    }
+    .feature-group h3 { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1.2rem; display: flex; align-items: center; gap: 12px; }
+    .feature-group h3 i { color: var(--brand-purple); font-size: 1.7rem; }
+    .feature-p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .highlight-text { font-weight: 700; color: var(--brand-blue); display: flex; align-items: center; font-size: 1rem; }
+
+    /* ══════════════ OUR APPROACH ══════════════ */
+    #our-approach { padding: 100px 0; background-color: var(--bg-light); }
+    .header-wrap { text-align: center; margin-bottom: 70px; }
+    .approach-badge {
+      display: inline-flex;
+      padding: 8px 20px;
+      background: rgba(26,58,143,0.08);
+      color: var(--brand-blue);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.5rem;
+    }
+    .approach-title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--text-dark); }
+    .approach-card {
+      padding: 2.5rem;
+      background: #fcfcfd;
+      border-radius: var(--radius);
+      border: 1px solid rgba(0,0,0,0.04);
+      height: 100%;
+    }
+    .approach-card h3 { font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 1.2rem; }
+    .discovery-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+    .discovery-list li {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 0; color: var(--text-muted); font-weight: 600;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+    .discovery-list li:last-child { border-bottom: none; }
+    .discovery-list li i { color: var(--brand-purple); font-size: 1.2rem; }
+    .scale-highlight {
+      background: linear-gradient(135deg, rgba(107,63,160,0.05) 0%, rgba(26,58,143,0.05) 100%);
+      border-left: 4px solid var(--brand-purple);
+      padding: 20px;
+      border-radius: 0 15px 15px 0;
+      margin-top: 1.5rem;
+    }
+    .scale-highlight p { font-size: 0.95rem; color: var(--text-dark); font-weight: 700; margin: 0; }
+    .approach-p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; }
+
+    /* ══════════════ TECHNOLOGIES ══════════════ */
+    #technologies { padding: 100px 0; background: var(--bg-white); }
+    :root {
+            --brand-purple: #6b3fa0;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+        }
+        .section-title {
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 30px;
+        }
+
+        /* Compact Filter Tabs */
+        .tech-tabs .nav-link {
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted) !important;
+            border: 1px solid #e2e8f0;
+            margin: 3px;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .tech-tabs .nav-link.active {
+            background: var(--brand-purple) !important;
+            color: #fff !important;
+            border-color: var(--brand-purple);
+            box-shadow: 0 4px 10px rgba(107, 63, 160, 0.2);
+        }
+
+        /* 8 Columns Grid for exactly 2 Rows (16 items) */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 12px;
+            margin-top: 2rem;
+        }
+
+        .tech-item {
+            background: #fff;
+            border: 1px solid #f1f5f9;
+            border-radius: 14px;
+            padding: 12px 5px;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            aspect-ratio: 1 / 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--brand-purple);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            background: #fdfcff;
+        }
+
+        .tech-item .tech-icon {
+            font-size: 2.2rem;
+            margin-bottom: 6px;
+            filter: grayscale(100%);
+            transition: 0.3s ease;
+        }
+
+        .tech-item:hover .tech-icon {
+            filter: grayscale(0%);
+            transform: scale(1.1);
+        }
+
+        .tech-item span {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1200px) { .tech-grid { grid-template-columns: repeat(6, 1fr); } }
+        @media (max-width: 992px) { .tech-grid { grid-template-columns: repeat(4, 1fr); } }
+        @media (max-width: 576px) { 
+            .tech-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+            .tech-item .tech-icon { font-size: 1.8rem; }
+        }
+
+    /* ══════════════ FAQ ══════════════ */
+    #faq { padding: 100px 0; background: var(--faq-bg); }
+    .lr-faq-item {
+      background: var(--faq-card) !important;
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--border) !important;
+      border-radius: 20px !important;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    .lr-faq-item:hover { border-color: rgba(167,139,250,0.4) !important; transform: translateX(5px); }
+    .lr-faq-trigger {
+      width: 100%;
+      background: transparent !important;
+      color: var(--faq-text) !important;
+      font-weight: 700 !important;
+      font-size: 1.05rem !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 1.5rem !important;
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: color 0.3s ease;
+      font-family: var(--ff-body);
+    }
+    .lr-faq-trigger:not(.collapsed) { color: var(--faq-accent) !important; }
+    .lr-faq-trigger::after {
+      content: '+'; font-size: 1.5rem; line-height: 1;
+      transition: transform 0.4s ease; color: var(--faq-accent); flex-shrink: 0;
+    }
+    .lr-faq-trigger:not(.collapsed)::after { content: '−'; transform: rotate(180deg); }
+    .lr-faq-body {
+      background: transparent !important;
+      color: var(--faq-muted);
+      font-size: 0.95rem;
+      padding: 0 1.5rem 1.5rem 1.5rem !important;
+      line-height: 1.7;
+    }
+    #faq .section-label {
+      background: rgba(167,139,250,0.1);
+      color: var(--faq-accent);
+    }
+
+    /* ══════════════ CONTACT / CTA ══════════════ */
+    #growth-section { padding: 80px 0; background-color: var(--bg-light); }
+    .header-container-lr { text-align: center; margin-bottom: 60px; }
+    .headline-lr { font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.2; }
+    .side-border-text {
+      border-left: 4px solid var(--brand-blue);
+      padding-left: 25px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 40px;
+    }
+    .description-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 30px; }
+    .mission-box {
+      background: #f9faff;
+      border-left: 5px solid var(--brand-purple);
+      padding: 30px 35px;
+      border-radius: 0 20px 20px 0;
+    }
+    .mission-box p { font-size: 1.2rem; font-weight: 700; line-height: 1.5; margin: 0; font-style: italic; color: var(--text-dark); }
+    .feature-card-lr {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      padding: 40px;
+      border-radius: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+      height: 100%;
+    }
+    .icon-circle {
+      width: 60px; height: 60px;
+      background: var(--grad);
+      color: white;
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+    .cta-footer {
+      margin-top: 60px;
+      background: var(--dark);
+      border-radius: 30px;
+      padding: 40px;
+    }
+    .btn-growth {
+      background: var(--grad);
+      color: white !important;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      border: none;
+      transition: 0.3s;
+      font-family: var(--ff-head);
+    }
+    .btn-growth:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(107,63,160,0.3); }
+
+   
+
+    /* ══════════════ RESPONSIVE ══════════════ */
+    @media (max-width: 991px) {
+      .hero { text-align: center; padding: 60px 0; min-height: auto; }
+      .hero h1 { font-size: 2.6rem; }
+      .trust-bar { justify-content: center; }
+      .form-card { margin-top: 50px; }
+      .about-row-equal { flex-direction: column; }
+      .about-img-box { min-height: 350px; margin-bottom: 30px; }
+      .about-badge { right: 10px; top: 10px; }
+      #about { padding: 60px 0; }
+      #why, #why-choosee, #our-approach { padding: 60px 0; }
+    }
+    @media (max-width: 767px) {
+      section { padding: 4rem 0; }
+      .hero h1 { font-size: 2.2rem; }
+      .tech-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); gap: 10px; }
+      .cta-footer { text-align: center; }
+    }
+    @media (max-width: 575px) {
+      .form-card { padding: 24px; }
+      .feature-group { padding: 1.5rem; }
+      .approach-card { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="header"></div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <!-- Content Left -->
+            <div class="col-lg-6">
+                <div class="badge-new">Trusted Business Technology Partner</div>
+                <h1>Premium Web Solutions for <span>Modern Businesses</span></h1>
+                <p class="hero-sub">
+                    We don't just build websites; we build growth engines. From MVP to full-scale digital ecosystems, IT Vowel provides the technical precision your vision deserves.
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#" class="btn-main">
+                        Launch Your Project <i class="bi bi-rocket-takeoff-fill"></i>
+                    </a>
+                    <a href="#" class="btn-outline">View Our Work</a>
+                </div>
+
+                <div class="trust-bar">
+                    <div class="trust-pill">
+                        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_92x30dp.png" height="15" alt="Google" class="me-2">
+                        <div class="stars me-2">
+                            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                        </div>
+                        <span class="pill-label">4.8 Rating</span>
+                    </div>
+                    <div class="trust-pill">
+                        <i class="bi bi-check-circle-fill text-accent-blue me-2"></i>
+                        <span class="pill-val">100+</span>
+                        <span class="pill-label">Enterprises Served</span>
+                    </div>
+                    <div class="trust-pill">
+                        <i class="bi bi-shield-check text-accent-purple me-2"></i>
+                        <span class="pill-val">8+</span>
+                        <span class="pill-label">Years of Mastery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Right -->
+            <div class="col-lg-6">
+                <div class="hero-visual-wrapper">
+                    <div class="main-visual-card">
+                        <div class="card-header-dots">
+                            <span style="background: #ff5f56;"></span>
+                            <span style="background: #ffbd2e;"></span>
+                            <span style="background: #27c93f;"></span>
+                        </div>
+
+                        <div class="mb-4 text-center">
+                            <h4 class="visual-title mb-1">Start Your Project</h4>
+                            <p style="opacity: 0.7; font-size: 0.9rem;">Get a free audit & project estimate</p>
+                        </div>
+
+                        <form id="heroForm" class="glass-form">
+                            <div class="row g-3">
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control" placeholder="Full Name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="email" class="form-control" placeholder="Work Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <select class="form-select">
+                                        <option value="" selected disabled>Select Business Service</option>
+                                        <option>Basic Website Development</option>
+                                        <option>Single Page Website Development</option>
+                                        <option>WordPress Website Development</option>
+                                        <option>Custom Website Development</option>
+                                        <option>Custom Web Software Development</option>
+                                        <option>Website Revamp</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="3" placeholder="Tell us about your project goals..."></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn-neon-submit">
+                                        Send Message <i class="bi bi-send-fill ms-2"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════ SERVICES ══════════════ -->
+<section id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label"><i class="bi bi-code-slash"></i> Our Expertise</span>
+      <h2 class="section-titlee fw-black">Core Services: <span class="text-gradient">What We Build for You</span></h2>
+      <p class="section-desc mx-auto mt-3">IT Vowel offers a full suite of web development services for startup growth. Each service is crafted to deliver measurable results and long-term scalability.</p>
+    </div>
+
+     <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>Basic Website Development</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
+                    <a href="../web-devlopment/basic-web.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>Single Page Website Development</h5>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint consequatur omnis voluptas tempore, officiis natus possimus voluptatibus fugiat aspernatur eaque, voluptatem esse impedit. Ut est magni aliquid dolorem non sapiente!</p>
+                    <a href="../web-devlopment/single-page.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>WordPress Website Development</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia enim dignissimos, mollitia iure beatae! Voluptatibus tempora, accusamus, architecto aut quibusdam exercitationem a molestias eum, nobis consequuntur sit ullam? Id!</p>
+                    <a href="../web-devlopment/wordpress.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>Website Revamping</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
+                    <a href="../web-devlopment/revamping.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>Custom Website Development</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
+                    <a href="../web-devlopment/custom-web.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="portfolio-card">
+                    <div class="card-header-flex">
+                        <div class="icon-box">
+                            <img src="../images/icons.png" alt="Icon">
+                        </div>
+                        <h5>Custom Web Software Development</h5>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
+                    <a href="../web-devlopment/custom-soft.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<!-- ══════════════ ABOUT ══════════════ -->
+<section id="about">
+  <div class="container">
+    <div class="about-header">
+      <span class="section-label"><i class="bi bi-building"></i> About IT Vowel</span>
+      <h2 class="section-titlee">Why We're the Best <span style="color: var(--brand-purple)">Web Development Agency</span> Modern Businesses   </h2>
+    </div>
+
+    <div class="row g-5 about-row-equal">
+      <div class="col-lg-6">
+        <div class="about-img-wrap position-relative h-100">
+          <div class="about-badge">
+            <span class="num">8+</span>
+            <div class="lbl">Years of<br>Development Excellence</div>
+          </div>
+          <div class="about-img-box">
+            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=2070&auto=format&fit=crop"
+                 alt="Web Development Team" class="about-main-img">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="about-content-col ps-lg-4">
+          <div>
+            <p style="color:var(--text-muted); font-size: 1.1rem; margin-bottom:1rem">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta necessitatibus deserunt sapiente eius soluta laudantium, voluptatum fuga magni quisquam sit porro tenetur ab commodi consequatur! Aliquam, distinctio? A, mollitia esse?
+            </p>
+            <p style="color:var(--text-muted); font-size: 1.1rem; margin-bottom:1.5rem">
+           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo sapiente velit officia quia dolorem numquam facere magni temporibus fugit harum magnam quaerat possimus, adipisci aliquam, voluptatem cumque sequi incidunt molestias?
+            </p>
+            <ul class="about-features">
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div><strong>Founder-Focused Engineering</strong>We work directly with founders to align technical architecture with business vision and long-term goals.</div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div><strong>Transparent Development Process</strong>Always know your project status, sprint progress and budget utilization in real time.</div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div><strong>Agile & Iterative Delivery</strong>We ship in sprints, gather feedback quickly and iterate so your product improves continuously.</div>
+              </li>
+              <li>
+                <i class="bi bi-check-circle-fill"></i>
+                <div><strong>Full-Stack Capability</strong>From UI/UX design to back-end systems and cloud deployment — everything under one roof.</div>
+              </li>
+            </ul>
+          </div>
+          <a href="#growth-section" class="btn-grad">Partner With Us <i class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ PROCESS ══════════════ -->
+<section id="process">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-label"><i class="bi bi-diagram-3-fill"></i> Our Process</span>
+      <h2 class="section-titlee">How We Work: <span style="color: var(--brand-purple)">From Brief to Launch</span></h2>
+      <p class="section-desc mx-auto mt-3">We break every web development project into 4 clear phases that make delivery predictable, collaborative and stress-free for your startup team.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step h-100">
+          <div class="step-num">01</div>
+          <h4>Discovery & Architecture</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step h-100">
+          <div class="step-num">02</div>
+          <h4>Design & Prototype</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step h-100">
+          <div class="step-num">03</div>
+          <h4>Build & Test</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-sm-6 col-lg-3">
+        <div class="process-step h-100">
+          <div class="step-num">04</div>
+          <h4>Launch & Scale</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ WHY INVEST ══════════════ -->
+<section id="why">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-label"><i class="bi bi-award-fill me-1"></i> Why It Matters</span>
+      <h2 class="section-titlee">Why Startups Must Invest in <span style="color: var(--brand-purple)">Professional Web Development</span></h2>
+      <p class="section-desc mx-auto mt-3">In today's digital economy, your website is your most powerful sales tool. A slow, generic or broken website costs you customers every single day.</p>
+      <span class="sub-label mt-2 d-block">Here's what professional web development can do for your startup:</span>
+    </div>
+
+    <div class="row g-3 justify-content-center">
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-trophy"></i></div>
+          <h5>Outshine Competitors</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+          <h5>Blazing Fast Performance</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-patch-check-fill"></i></div>
+          <h5>Build Brand Credibility</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-funnel"></i></div>
+          <h5>Convert More Visitors</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+      <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h5>Scale Without Limits</h5>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ STRATEGIC PARTNER ══════════════ -->
+<section id="why-choosee">
+  <div class="container">
+    <div class="section-header-center">
+      <span class="badge-lr"><i class="bi bi-patch-check-fill"></i> Why IT Vowel</span>
+      <h2 class="display-h2">The Development Partner <br><span style="color: var(--brand-purple)">Your Business Needs</span></h2>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-6">
+        <div class="feature-group h-100">
+          <h3><i class="bi bi-lightning-charge-fill"></i> Built for Early-Stage Speed</h3>
+          <p class="feature-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ea expedita esse reiciendis enim blanditiis minus consectetur ducimus accusantium impedit provident hic saepe quam nulla, fuga consequatur rem aliquam quos?</p>
+          <p class="feature-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vel, voluptatibus sequi beatae maxime, similique unde illo quaerat eligendi reiciendis vero, enim expedita fugiat. Beatae, dolorem! Alias eligendi ab quidem.</p>
+          <p class="feature-p mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eius mollitia quos, quasi, iure molestias, adipisci voluptas odit recusandae nam quisquam eos labore maiores hic et quod maxime porro rerum?</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-group h-100">
+          <h3><i class="bi bi-graph-up-arrow"></i> Engineering-Driven Growth</h3>
+         <p class="feature-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ea expedita esse reiciendis enim blanditiis minus consectetur ducimus accusantium impedit provident hic saepe quam nulla, fuga consequatur rem aliquam quos?</p>
+          <p class="feature-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad vel, voluptatibus sequi beatae maxime, similique unde illo quaerat eligendi reiciendis vero, enim expedita fugiat. Beatae, dolorem! Alias eligendi ab quidem.</p>
+          <p class="feature-p mb-0">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat eius mollitia quos, quasi, iure molestias, adipisci voluptas odit recusandae nam quisquam eos labore maiores hic et quod maxime porro rerum?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ OUR APPROACH ══════════════ -->
+<section id="our-approach">
+  <div class="container">
+    <div class="header-wrap">
+      <span class="approach-badge"><i class="bi bi-gear-wide-connected me-2"></i> Our Approach</span>
+      <h2 class="approach-title">Web Development Strategies for <span style="color: var(--brand-purple)">Small Business Startups</span></h2>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="approach-card h-100">
+          <h3>Data-Backed Architecture Meets Startup Velocity</h3>
+          <p class="approach-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum ex aut deserunt aliquid vero repudiandae perferendis sit dolorum. Voluptatibus, sunt quaerat! Molestias modi similique, quo eveniet assumenda beatae nam aperiam.</p>
+          <p class="fw-bold text-dark mt-4 mb-2">Lorem ipsum dolor sit, amet consectetur </p>
+          <ul class="discovery-list">
+            <li><i class="bi bi-check2-circle"></i> User research and competitive benchmarking</li>
+            <li><i class="bi bi-check2-circle"></i> Technology stack recommendation and planning</li>
+            <li><i class="bi bi-check2-circle"></i> Information architecture and sitemap design</li>
+            <li><i class="bi bi-check2-circle"></i> Defining KPIs and success metrics for launch</li>
+          </ul>
+          <p class="approach-p mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi accusamus culpa impedit, velit alias ipsam quis totam modi cumque perspiciatis ab cupiditate repudiandae adipisci commodi, id labore facilis distinctio animi!</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="approach-card h-100">
+          <h3>Iterate Quickly, Ship Confidently</h3>
+          <p class="approach-p">Once we launch your MVP or first version we monitor real user behaviour, performance metrics and conversion data closely. We run A/B tests on landing pages, CTAs and UI patterns to continuously improve.</p>
+          <div class="scale-highlight">
+            <p>This rapid iteration cycle lets us make data-driven decisions quickly — doubling down on what converts and eliminating what doesn't.</p>
+          </div>
+          <p class="approach-p mt-4">By following our startup-focused web development methodology we ensure every hour of engineering and every rupee spent moves your business measurably forward.</p>
+          <div class="mt-4 pt-3 d-flex align-items-center gap-3">
+            <div style="width: 50px; height: 2px; background: var(--brand-purple);"></div>
+            <span class="fw-bold small text-uppercase" style="color: var(--brand-purple); letter-spacing: 1px;">Shipped & Ready to Grow</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h2 class="portfolio-title fs-1">Our Portfolio</h2>
+        <p class="text-muted mx-auto" style="max-width: 600px;">
+            We specialize in creating high-performance, visually stunning websites and custom software solutions designed to scale your business.
+        </p>
+    </div>
+
+    <!-- Cards Container -->
+    <div class="row row-cols-1 row-cols-md-2 g-4" id="portfolio-grid">
+        <!-- JS will inject 6 cards here -->
+    </div>
+</div>
+
+<!-- Reusable Modal -->
+<div class="modal fade" id="previewModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="m-title" style="color: var(--main-color);">Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0 text-center" id="modalBody">
+                <!-- Content (Img/PDF) injected by JS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // 1. Data with Headings and Descriptions
+    const projects = [
+        { 
+            title: "Varun-Real-Estate", 
+            img: "../images/Des1.png", 
+            file: "../images/Des1.png",
+            desc: "Discover premium residential and commercial properties designed for modern living. We provide trusted real estate solutions with elegant designs, prime locations, and exceptional investment opportunities tailored to your lifestyle and business needs."
+        },
+        { 
+            title: "Ag Tutoring", 
+            img: "../images/Des2.png", 
+            file: "../images/Des2.png",
+            desc: "AG Tutoring provides expert online and in-person tutoring to help students achieve academic success with personalized learning and guidance."
+        },
+        { 
+            title: "New Northern Travels", 
+            img: "../images/Des4.png", 
+            file: "../images/Des4.png",
+            desc: "Providing comfortable and affordable bus travel solutions with modern amenities, online ticket booking, luxury coaches, and routes connecting major cities for safe and convenient journeys."
+        },
+        { 
+            title: "RNKIndospan", 
+            img: "../images/Des5.png", 
+            file: "../images/Des5.png",
+            desc: "RNK Indospan is a professionally managed rice trading and export company specializing in sourcing, processing, and supplying premium quality Indian rice to domestic and international markets."
+        },
+        { 
+            title: "AM RC Inc", 
+            img: "../images/Des6.png", 
+            file: "../images/Des6.png",
+            desc: " AMRC Inc is to be the preferred manufacturing partner for global High Fashion apparel brands by offering reliable, scalable and innovative garment production solutions. "
+        },
+        { 
+            title: "Faisal Kabab Hut", 
+            img: "../images/Desgin3.png", 
+            file: "../images/Desgin3.png",
+            desc: "Experience the rich flavors of Faisal Kabab Hut, the premier destination for authentic Pakistani dishes in Calgary. Kababs, biryani & other Pakistani specialties plated in a quaint restaurant with old-school decor."
+        }
+    ];
+
+    // 2. Generate cards dynamically
+    const grid = document.getElementById('portfolio-grid');
+    projects.forEach((item) => {
+        grid.innerHTML += `
+            <div class="col">
+                <div class="card h-100 shadow-sm overflow-hidden">
+                    <div class="screenshot-card" onclick="openModal('${item.file}', '${item.title}')">
+                        <img src="${item.img}" alt="${item.title}">
+                    </div>
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2" style="color: #222;">${item.title}</h5>
+                        <p class="text-muted service-desc px-2">${item.desc}</p>
+                       
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    // 3. Modal logic
+    function openModal(fileUrl, title) {
+        const body = document.getElementById('modalBody');
+        document.getElementById('m-title').innerText = title;
+        
+        // Loader logic
+        body.innerHTML = '<div class="p-5 text-muted">Loading preview...</div>';
+        
+        setTimeout(() => {
+            if (fileUrl.toLowerCase().endsWith('.pdf')) {
+                body.innerHTML = `<iframe src="${fileUrl}" width="100%" height="75vh" style="border:none;"></iframe>`;
+            } else {
+                body.innerHTML = `<img src="${fileUrl}" class="img-fluid w-100 shadow">`;
+            }
+        }, 300);
+        
+        const myModal = new bootstrap.Modal(document.getElementById('previewModal'));
+        myModal.show();
+    }
+</script>
+
+
+<!-- ══════════════ TECHNOLOGIES ══════════════ -->
+<section id="technologies">
+    <div class="container">
+        <div class="text-center">
+<h2 class="section-titlee">Technologies We <span class="text-gradient">Master & Use</span></h2>
+      <p class="section-desc mx-auto mt-3">We choose the best tools for every project — modern, battle-tested and built for performance, scalability and long-term maintainability.</p>        </div>
+
+        <!-- Filter Tabs (Including Database) -->
+        <div class="d-flex flex-wrap justify-content-center tech-tabs mb-4">
+            <button class="nav-link active" data-filter="all">All</button>
+            <button class="nav-link" data-filter="frontend">Frontend</button>
+            <button class="nav-link" data-filter="backend">Backend</button>
+            <button class="nav-link" data-filter="database">Database</button>
+            <button class="nav-link" data-filter="cms">CMS</button>
+        </div>
+
+        <div class="tech-grid" id="techGrid">
+            <!-- Row 1 -->
+            <div class="tech-item" data-cat="frontend"><i class="devicon-html5-plain colored tech-icon"></i><span>HTML5</span></div>
+            <div class="tech-item" data-cat="frontend"><i class="devicon-css3-plain colored tech-icon"></i><span>CSS3</span></div>
+            <div class="tech-item" data-cat="frontend"><i class="devicon-javascript-plain colored tech-icon"></i><span>JS</span></div>
+            <div class="tech-item" data-cat="frontend"><i class="devicon-react-original colored tech-icon"></i><span>React</span></div>
+            <div class="tech-item" data-cat="frontend"><i class="devicon-bootstrap-plain colored tech-icon"></i><span>Bootstrap</span></div>
+            <div class="tech-item" data-cat="frontend"><i class="devicon-tailwindcss-plain colored tech-icon"></i><span>Tailwind</span></div>
+            <div class="tech-item" data-cat="backend"><i class="devicon-nodejs-plain colored tech-icon"></i><span>NodeJS</span></div>
+            <div class="tech-item" data-cat="backend"><i class="devicon-python-plain colored tech-icon"></i><span>Python</span></div>
+            
+            <!-- Row 2 -->
+            <div class="tech-item" data-cat="backend"><i class="devicon-php-plain colored tech-icon"></i><span>PHP</span></div>
+            <div class="tech-item" data-cat="backend"><i class="devicon-laravel-original colored tech-icon"></i><span>Laravel</span></div>
+            <div class="tech-item" data-cat="database"><i class="devicon-mysql-plain colored tech-icon"></i><span>MySQL</span></div>
+            <div class="tech-item" data-cat="database"><i class="devicon-mongodb-plain colored tech-icon"></i><span>MongoDB</span></div>
+            <div class="tech-item" data-cat="database"><i class="devicon-postgresql-plain colored tech-icon"></i><span>Postgres</span></div>
+            <div class="tech-item" data-cat="database"><i class="devicon-firebase-plain colored tech-icon"></i><span>Firebase</span></div>
+            <div class="tech-item" data-cat="cms"><i class="devicon-wordpress-plain colored tech-icon"></i><span>WordPress</span></div>
+            <div class="tech-item" data-cat="cms"><i class="devicon-shopify-plain colored tech-icon"></i><span>Shopify</span></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterButtons = document.querySelectorAll('.tech-tabs .nav-link');
+        const techItems = document.querySelectorAll('.tech-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from other buttons
+                document.querySelector('.tech-tabs .nav-link.active').classList.remove('active');
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filterValue = button.getAttribute('data-filter');
+
+                techItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-cat') === filterValue) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
+
+
+<!-- ══════════════ FAQ ══════════════ -->
+<section id="faq">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="text-center mb-5">
+          <span class="section-label"><i class="bi bi-patch-question"></i> FAQ</span>
+          <h2 class="display-5 fw-bold" style="color: #fff;">Got Questions? <br><span style="color: var(--faq-accent);">We Have Answers.</span></h2>
+        </div>
+
+        <div class="accordion" id="faqAccordion">
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </button>
+            </h3>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">A basic or single-page website can be live in 7–14 days. WordPress websites typically take 2–4 weeks. Custom web development projects range from 4–12 weeks depending on complexity, feature scope and the number of feedback rounds. We always provide a clear timeline during the discovery phase so you know exactly what to expect.</div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              </button>
+            </h3>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">We've delivered professional websites starting from ₹15,000 for basic sites and scaled to multi-lakh projects for custom software platforms. Our strategies adapt completely to your stage and budget. We always prioritize delivering maximum ROI for what you invest, starting lean and scaling as your traction grows.</div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              </button>
+            </h3>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">Absolutely — mobile-first and performance-first are non-negotiable standards in everything we build. Every website we deliver scores 90+ on Google PageSpeed Insights, is fully responsive across all screen sizes and meets Core Web Vitals benchmarks. Speed and mobile experience directly impact both SEO and conversions.</div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              </button>
+            </h3>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">Yes — we offer flexible monthly maintenance plans covering security updates, performance monitoring, content updates, bug fixes and feature additions. We prefer long-term partnerships and many of our clients have worked with us for years as their startup scaled. We grow with you.</div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              </button>
+            </h3>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">Yes — we build every website with content management in mind. WordPress sites come with a user-friendly CMS that requires zero coding knowledge. For custom builds, we integrate headless CMS platforms or build admin panels so your team can manage content, products, blogs and more independently after handover.</div>
+            </div>
+          </div>
+
+          <div class="lr-faq-item">
+            <h3 class="accordion-header">
+              <button class="lr-faq-trigger collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              </button>
+            </h3>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="lr-faq-body">We've built digital products for SaaS, fintech, e-commerce, B2B services, consumer apps, edtech, healthcare, real estate and more. Our development playbooks and design systems generalize intelligently across verticals while being tailored to your specific industry's user expectations and compliance requirements.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════ CONTACT / CTA ══════════════ -->
+<section id="growth-section">
+  <div class="container">
+
+    <div class="header-container-lr">
+      <span class="badge-lr">IT Vowel Agency</span>
+      <h2 class="headline-lr">Get A Development Partner <br><span class="text-gradient">You Can Rely On</span></h2>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="side-border-text">At IT Vowel, we believe every startup deserves a world-class web presence — one that attracts visitors, converts customers and scales without breaking.</div>
+        <p class="description-text">Lorem ipsum dolor sit, amet consectetur  <strong>Lorem ipsum dolor sit amet consectet</strong>. We don't just build websites; we build growth engines.</p>
+        <div class="mission-box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptate animi, saepe numquam quam ullam modi. Natus impedit culpa quas, corrupti beatae harum eos ipsum a architecto nobis quia praesentium.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card-lr">
+          <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
+          <h3 class="h4 fw-bold mb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
+          <p class="description-text mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro fugit qui voluptatem accusantium consectetur amet, molestias explicabo doloribus iure odit quos reprehenderit natus eligendi eveniet esse. Tempora itaque laboriosam alias.</p>
+          <hr class="my-4">
+          <div class="d-flex align-items-center gap-3">
+            <div class="text-primary fs-4"><i class="bi bi-graph-up-arrow"></i></div>
+            <p class="mb-0 fw-bold">From MVP to market leader — we engineer results through code and craft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-footer shadow-lg mt-5">
+      <div class="row align-items-center text-center text-lg-start">
+        <div class="col-lg-8 mb-4 mb-lg-0">
+          <h3 class="text-white fw-bold h4 mb-2">Ready to build your startup's digital foundation?</h3>
+          <p class="text-white-50 mb-0">IT Vowel is the development partner you've been looking for. Let's turn your vision into a live product.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a href="tel:+919041381102" class="btn-growth"><i class="bi bi-telephone"></i> Start Your Project</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<div id="footer"></div> 
+
+
+
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // ── Sticky navbar scroll effect
+  const nav = document.getElementById('mainNav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // ── Active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.3 });
+  sections.forEach(s => observer.observe(s));
+
+  // ── Scroll reveal animation
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card-premium, .process-step, .why-card, .feature-group, .approach-card, .tech-item, .lr-faq-item').forEach((el, i) => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = `opacity .5s ease ${(i % 6) * 0.08}s, transform .5s ease ${(i % 6) * 0.08}s`;
+    revealObserver.observe(el);
+  });
+
+  // ── Tech filter tabs
+  const tabBtns = document.querySelectorAll('#techTabs .nav-link');
+  const techItems = document.querySelectorAll('#techGrid .tech-item');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      techItems.forEach(item => {
+        const show = filter === 'all' || item.dataset.cat === filter;
+        item.style.display = show ? 'block' : 'none';
+        if (show) {
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.9)';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        }
+      });
+    });
+  });
+
+  // ── Hero form submit
+  document.getElementById('heroForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.btn-submit');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
+    setTimeout(() => {
+      btn.disabled = false;
+      btn.innerHTML = '✓ Message Sent! We\'ll contact you soon.';
+      btn.style.background = 'linear-gradient(135deg, #16a34a, #15803d)';
+      this.reset();
+      setTimeout(() => {
+        btn.innerHTML = 'SEND MESSAGE &nbsp;<i class="bi bi-send-fill"></i>';
+        btn.style.background = '';
+      }, 4000);
+    }, 1800);
+  });
+
+  // ── Close mobile menu on link click
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const toggler = document.querySelector('.navbar-toggler');
+      const menu = document.getElementById('navMenu');
+      if (menu && menu.classList.contains('show')) toggler.click();
+    });
+  });
+</script>
+</body>
+</html>
