@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", function(){
   // Quote form submission handler
   const quoteForm = document.getElementById('quoteForm');
   if(quoteForm){
-    quoteForm.addEventListener('submit', function(e) {
+    quoteForm.addEventListener('submit', async function(e) {
       e.preventDefault();
-      
+
       const formData = new FormData(this);
       const data = {
         form_type: 'quote',
@@ -14,8 +14,12 @@ document.addEventListener("DOMContentLoaded", function(){
         website: formData.get('website')
       };
 
+      const submitBtn = this.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
       try {
-        const response = await fetch('http://localhost:3000', {
+        const response = await fetch('https://w4qjc1i4r0.execute-api.ap-south-1.amazonaws.com/default/itvowel-froms', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
@@ -30,6 +34,9 @@ document.addEventListener("DOMContentLoaded", function(){
       } catch (error) {
         console.error('Error:', error);
         alert('Something went wrong. Please try again.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Request a Quote';
       }
     });
   }
@@ -62,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function(){
           last_name: formData.get('last_name'),
           country_code: formData.get('country_code'),
           phone: formData.get('phone'),
+          whatsapp_same: formData.get('whatsapp_same') === 'on', // checkbox returns 'on' when checked
           email: formData.get('email'),
           website: formData.get('website'),
           description: formData.get('description')
@@ -73,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function(){
       submitBtn.textContent = 'Sending...';
 
       try {
-        const response = await fetch('http://localhost:3000', {
+        const response = await fetch('https://w4qjc1i4r0.execute-api.ap-south-1.amazonaws.com/default/itvowel-froms', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(data)
