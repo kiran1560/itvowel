@@ -1562,12 +1562,70 @@ We’ve worked across SaaS, fintech, e-commerce, B2B, consumer apps, edtech, and
 
         </div>
 
+        <!-- Contact Form -->
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="bg-white rounded-4 shadow-lg p-4">
+                    <h3 class="text-center mb-4" style="color: var(--lr-purple);">Let's Build Your Growth Strategy</h3>
+                    <div id="formSuccess" class="alert alert-success" style="display: none;">
+                        <i class="bi bi-check-circle-fill me-2"></i>Message sent successfully! We'll get back to you soon.
+                    </div>
+                    <form id="contactForm" novalidate action="#" method="post">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" id="contactName" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" id="contactEmail" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="col-12">
+                                <div class="phone-input-wrapper">
+                                    <select name="country_code" id="contactCountryCode" class="country-select form-select">
+                                        <option value="+1" selected>+1 (US)</option>
+                                        <option value="+91">+91 (IN)</option>
+                                        <option value="+44">+44 (UK)</option>
+                                        <option value="+61">+61 (AU)</option>
+                                        <option value="+1">+1 (CA)</option>
+                                        <option value="+64">+64 (NZ)</option>
+                                        <option value="+971">+971 (UAE)</option>
+                                        <option value="+49">+49 (DE)</option>
+                                    </select>
+                                    <input type="tel" id="contactPhone" class="form-control" placeholder="Phone Number">
+                                </div>
+                                <div class="form-check mt-2">
+                                    <input class="form-check-input" type="checkbox" id="contactWhatsappCheck">
+                                    <label class="form-check-label small fw-light" for="contactWhatsappCheck" style="font-size: 0.85rem;">
+                                        Same number on WhatsApp, reply yes
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <textarea id="contactMsg" class="form-control" rows="4" placeholder="Tell us about your startup and growth goals..." required></textarea>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-primary px-5 py-2">
+                                    Send Message <i class="bi bi-send-fill ms-1"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <div class="cta-footer shadow-lg mt-5">
             <div class="row align-items-center text-center text-lg-start">
                 <div class="col-lg-8 mb-4 mb-lg-0">
                     <h3 class="text-white fw-bold h4 mb-2">Ready to take your startup to the next level?</h3>
-                    <p class="text-white-50 mb-0">Long Radius is the partner you’ve been looking for. Let’s turn vision into results.</p>
+                    <p class="text-white-50 mb-0">Long Radius is the partner you've been looking for. Let's turn vision into results.</p>
                 </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="tel:+919041381102 " class="btn-growth">
+                        <i class="bi bi-telephone"></i> Start Your Journey
+                    </a>
+                </div>
+            </div>
+        </div>
                 <div class="col-lg-4 text-lg-end">
                     <a href="tel:+919041381102 " class="btn-growth">
                         <i class="bi bi-telephone"></i> Start Your Journey
@@ -1635,22 +1693,74 @@ We’ve worked across SaaS, fintech, e-commerce, B2B, consumer apps, edtech, and
   });
 
   // Contact form
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
+  console.log('Setting up contact form listener...');
+
+  // Debug: Check form elements on load
+  setTimeout(() => {
+    console.log('Checking form elements after 1 second...');
+    const form = document.getElementById('contactForm');
+    const checkbox = document.getElementById('contactWhatsappCheck');
+    const label = document.querySelector('label[for="contactWhatsappCheck"]');
+
+    console.log('Form:', form);
+    console.log('Checkbox:', checkbox);
+    console.log('Label:', label);
+
+    if (checkbox) {
+      console.log('Checkbox display:', getComputedStyle(checkbox).display);
+      console.log('Checkbox visibility:', getComputedStyle(checkbox).visibility);
+    }
+    if (label) {
+      console.log('Label display:', getComputedStyle(label).display);
+      console.log('Label visibility:', getComputedStyle(label).visibility);
+    }
+  }, 1000);
+
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
     e.preventDefault();
+    e.stopPropagation();
+    console.log('Form submitted, preventing default and propagation');
     const name = document.getElementById('contactName').value.trim();
     const email = document.getElementById('contactEmail').value.trim();
+    const phone = document.getElementById('contactPhone').value.trim();
+    const countryCode = document.getElementById('contactCountryCode').value;
+    const whatsappSame = document.getElementById('contactWhatsappCheck').checked;
     const msg = document.getElementById('contactMsg').value.trim();
     if (!name || !email || !msg) return;
+
     const btn = this.querySelector('button[type=submit]');
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
-    setTimeout(() => {
+
+    try {
+      const response = await fetch('https://w4qjc1i4r0.execute-api.ap-south-1.amazonaws.com/default/itvowel-froms', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          form_type: 'grow_business',
+          name: name,
+          email: email,
+          phone: phone,
+          country_code: countryCode,
+          whatsapp_same: whatsappSame,
+          message: msg
+        })
+      });
+
+      if (response.ok) {
+        document.getElementById('formSuccess').style.display = 'block';
+        this.reset();
+        setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
+      } else {
+        throw new Error('Failed to submit');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
       btn.disabled = false;
       btn.innerHTML = 'Send Message <i class="bi bi-send-fill ms-1"></i>';
-      document.getElementById('formSuccess').style.display = 'block';
-      this.reset();
-      setTimeout(() => { document.getElementById('formSuccess').style.display = 'none'; }, 5000);
-    }, 1800);
+    }
   });
 
   // Close mobile menu on link click
