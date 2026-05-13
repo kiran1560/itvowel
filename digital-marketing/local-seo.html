@@ -21,9 +21,293 @@
 <link rel="stylesheet" href="../css/hero.css">
 <script src="../js/script.js"></script>
 <script src="../js/header.js"></script>
+<style>
+  :root {
+      --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+      --card-bg: #ffffff;
+      --text-main: #1f2937;
+      --text-muted: #6b7280;
+      --accent-start: #6366f1;
+      --accent-end: #a855f7;
+      --accent-light: #f5f3ff;
+      --accent-border: rgba(99,102,241,0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-main);
+      background: #f9f9fb;
+      overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4,h5,h6 { font-family: 'Syne', sans-serif; }
+
+    /* ── SHARED HELPERS ── */
+    .grad-text {
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .section-label {
+      display: block;
+      text-align: center;
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size:25px;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.3;
+      color: var(--text-main);
+      margin-bottom: 16px;
+      text-align: center;
+      font-family:sans-serif;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.75;
+      text-align: center;
+    }
+    .btn-grad {
+      background: var(--primary-gradient);
+      color: #fff;
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 32px;
+      border-radius: 8px;
+      border: none;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-grad:hover { opacity: 0.88; transform: translateY(-2px); color: #fff; }
+
+    /* ── FADE ANIMATION ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════
+       SECTION 1 — INTRO / SERVICES
+    ══════════════════════════════════════ */
+    #section-intro {
+      background: #fff;
+      padding: 88px 0;
+    }
+    .intro-lead {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--primary-gradient);
+      opacity: 0;
+      transition: opacity 0.25s;
+      border-radius: 14px 14px 0 0;
+    }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 32px rgba(99,102,241,0.13); border-color: rgba(99,102,241,0.3); }
+    .service-card:hover::before { opacity: 1; }
+    .service-icon {
+      width: 46px; height: 46px;
+      border-radius: 11px;
+      background: var(--primary-gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 16px;
+    }
+    .service-card h5 { font-weight: 700; font-size: 0.95rem; color: var(--text-main); margin-bottom: 6px; }
+    .service-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.65; margin: 0; }
+
+    /* ══════════════════════════════════════
+       SECTION 2 — WHY US
+    ══════════════════════════════════════ */
+    #section-why {
+      background: var(--accent-light);
+      padding: 88px 0;
+    }
+    .why-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 14px;
+      padding: 28px 24px;
+      height: 100%;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .why-card:hover { transform: translateY(-4px); box-shadow: 0 8px 28px rgba(99,102,241,0.12); }
+    .why-icon {
+      flex-shrink: 0;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: var(--primary-gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 1.1rem;
+    }
+    .why-card h6 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--text-main); margin-bottom: 6px; }
+    .why-card p { font-size: 0.87rem; color: var(--text-muted); line-height: 1.65; margin: 0; }
+
+    /* ══════════════════════════════════════
+       SECTION 3 — REAL RESULTS
+    ══════════════════════════════════════ */
+    #section-results {
+      background: #fff;
+      padding: 88px 0;
+    }
+    .result-card {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 14px;
+      padding: 32px 22px;
+      text-align: center;
+      height: 100%;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .result-card:hover { transform: translateY(-5px); box-shadow: 0 10px 32px rgba(99,102,241,0.12); }
+    .result-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      background: var(--primary-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .result-card p { color: var(--text-muted); font-size: 0.87rem; line-height: 1.65; margin: 0; }
+
+    /* ══════════════════════════════════════
+       SECTION 4 — WHAT YOU GET
+    ══════════════════════════════════════ */
+    #section-whatyouget {
+      background: var(--accent-light);
+      padding: 88px 0;
+    }
+    .deliver-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 20px 0;
+      border-bottom: 1px solid rgba(99,102,241,0.1);
+    }
+    .deliver-item:last-child { border-bottom: none; }
+    .deliver-check {
+      flex-shrink: 0;
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      background: var(--primary-gradient);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+    .deliver-item p { font-size: 0.95rem; color: var(--text-main); margin: 0; line-height: 1.65; }
+    .deliver-note {
+      background: var(--card-bg);
+      border: 1px solid var(--accent-border);
+      border-radius: 14px;
+      padding: 28px;
+      margin-top: 32px;
+    }
+    .deliver-note p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+    /* ══════════════════════════════════════
+       SECTION 5 — CTA / GROWTH
+    ══════════════════════════════════════ */
+    #section-cta {
+      background: var(--primary-gradient);
+      padding: 96px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #section-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 80% at 10% 50%, rgba(255,255,255,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 45% 70% at 90% 50%, rgba(0,0,0,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    #section-cta .section-title { color: #fff; }
+    #section-cta .section-sub { color: rgba(255,255,255,0.82); }
+    #section-cta .section-label {
+      background: rgba(255,255,255,0.22);
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      -webkit-text-fill-color: #fff;
+      color: #fff;
+      border-radius: 50px;
+      padding: 5px 16px;
+    }
+    .cta-highlight-box {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 14px;
+      padding: 28px 32px;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.97rem;
+      line-height: 1.8;
+    }
+    .btn-cta-white {
+      background: #fff;
+      color: var(--accent-start);
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); color: var(--accent-start); }
+
+    @media (max-width: 768px) {
+      #section-intro, #section-why, #section-results,
+      #section-whatyouget, #section-cta { padding: 60px 0; }
+    }
+  </style>
 </head>
 <body>
-
 <div id="header"></div>
 
 <section class="tg-hero">
@@ -40,42 +324,38 @@
 <div class="col-lg-7">
 
 <h1 class="tg-title">
-Trusted <span>White Label Marketing</span> Company
+Trusted <span>Local SEO </span>Agency
 </h1>
 
-<h3 class="tg-text">
-Lorem ipsum dolor sit amet consectetur adipisicing elit.
-</h3>
+<h2 class="tg-text">
+Local SEO Agency That Puts Your Business on the Map
+</h2>
 <p class="mt-3" style="font-size: 18px;">
-Want to grow your business without increasing your expenses? Our White Label Marketing services are the ideal solution for you.
 </p>
-
 <ul class="check-list">
 <li>
 <i class="bi bi-check-circle-fill"></i>
-Want to grow your business without increasing expenses? White Label Marketing is the ideal solution.
+The local SEO agency helps your business gain online visibility through multiple online platforms. Customers are conducting their searches but they need to find either your business or your competitors.
 </li>
 
 <li>
 <i class="bi bi-check-circle-fill"></i>
-Whether your company is big or small, White Label services help take your business to the next level.
+Our local seo company doesn’t just improve rankings—we turn local searches into real, paying customers. From dominating “near me” searches to securing top positions on Google Maps, we ensure your business shows up exactly where your audience is looking.</li>
+
+<li>
+<i class="bi bi-check-circle-fill"></i>
+We go beyond basic local seo services—we become your complete visibility partner. Every strategy we craft is designed to attract the right local audience, build trust, and convert clicks into loyal customers.
 </li>
 
 <li>
 <i class="bi bi-check-circle-fill"></i>
-With Long Radius, you can scale your business efficiently and cost-effectively.
-</li>
-
-<li>
-<i class="bi bi-check-circle-fill"></i>
-A dedicated team of professionals works to deliver the best marketing outcomes.
-</li>
-
+Best local SEO services focus on results which help your business achieve online presence that leads to increased customer recognition and selection.</li>
+<!-- --
 <li>
 <i class="bi bi-check-circle-fill"></i>
 Expand your services and maintain a strong presence in the digital world.
 </li>
-
+-->
 </ul>
 
 
@@ -113,40 +393,258 @@ Expand your services and maintain a strong presence in the digital world.
 <textarea class="form-control" id="message" placeholder="How can we help you?" required></textarea>
 <div class="invalid-feedback">Enter message</div>
 </div>
-
 <button type="submit" class="btn tg-btn w-100">GET IN TOUCH</button>
-
 </form>
 </div>
-
 </div>
-
 </section>
 
-
-<section class="creative-agency-section">
-  <div class="container text-center">
-
-    <div class="agency-tag">We are Professional White Marketing Company</div>
-
-    <h2 class="agency-title">
-      <span>Trusted White Marketing </span>Company
-    </h2>
-
-    <p class="agency-desc">
-      Want to grow your business without increasing your expenses? Our <span>White Label Marketing services</span> an the ideal solution for you. Whether your company is big or small, White Label services are the sure way to take your business to the heights. With <span>IT Vowel</span> a Brand of Long Radius Solutions, you don't need to worry about your business. We assist you to scale it efficiently and cost-effectively.
-    </p>
-
-    <h3 class="agency-highlight">
-      Hire us for Web & Apps White Label Marketing
-    </h3>
-
-    <p class="agency-desc">
-      A dedicated team of professionals and experts works for the best outcomes. If you are looking for an opportunity that will help you to expand your offerings and maintain a great space in the digital world, we are always ready to serve you the great marketing services.
-    </p>
-
+<!-- ══════════════════════════════════════
+     SECTION 1 — INTRO + SERVICES
+══════════════════════════════════════ -->
+<section id="section-intro">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-lg-8 text-center fade-up">
+        <span class="section-label">Local SEO Services</span>
+        <h2 class="section-title">Local SEO Services for Businesses<br>That Want to Be Found First</h2>
+        <p class="intro-lead">
+          Your business will lose potential revenue when it fails to appear in local search results. Our dedicated local SEO specialist enables businesses to achieve market dominance through strategic competition. Our company does not pursue guesswork because we want to achieve an intelligent and planned path to growth.
+        </p>
+        <p class="section-sub mb-0"><strong>Your local business SEO will increase through our effective approaches which include:</strong></p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-google"></i></div>
+          <h5>Google Business Profile</h5>
+          <p>Your Google Business Profile needs optimization to achieve its maximum display potential.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-search"></i></div>
+          <h5>Local Keywords</h5>
+          <p>The process involves choosing local keywords which have high conversion rates.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-link-45deg"></i></div>
+          <h5>Building Citations</h5>
+          <p>The process of building citations requires both strength and regularity.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-star-fill"></i></div>
+          <h5>Customer Reviews</h5>
+          <p>Customer reviews need to be transformed into signals which establish trust.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-pencil-square"></i></div>
+          <h5>Hyper-Local Content</h5>
+          <p>The process requires us to produce hyper-local content that establishes connections.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 fade-up">
+        <div class="service-card">
+          <div class="service-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <h5>Revenue Growth</h5>
+          <p>Your revenue growth directly depends on your increased visibility.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- ══════════════════════════════════════
+     SECTION 2 — WHY US
+══════════════════════════════════════ -->
+<section id="section-why">
+  <div class="container">
+    <div class="row mb-5 justify-content-center">
+      <div class="col-lg-8 text-center fade-up">
+        <span class="section-label">The Advantages Of Selecting Our Local SEO Agency</span>
+        <h2 class="section-title">The Advantages Of Selecting<br>Our Local SEO Agency</h2>
+        <p class="section-sub">
+          Our agency delivers effective local SEO solutions through our combination of creative and performance-based approaches. Our team achieves higher rankings through our methods which establish complete online market control.
+        </p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-currency-dollar"></i></div>
+          <div>
+            <h6>Affordable &amp; Results-Focused</h6>
+            <p>The affordable local SEO company focuses on delivering results to clients.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-diagram-3-fill"></i></div>
+          <div>
+            <h6>Custom Strategies</h6>
+            <p>We create strategies which suit your specific market requirements.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-bar-chart-fill"></i></div>
+          <div>
+            <h6>Proven Methods</h6>
+            <p>Our methods achieve successful results for improving local business SEO.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 fade-up">
+        <div class="why-card">
+          <div class="why-icon"><i class="bi bi-eye-fill"></i></div>
+          <div>
+            <h6>Full Transparency</h6>
+            <p>Our system delivers transparent information which eliminates any need for estimation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 3 — REAL RESULTS
+══════════════════════════════════════ -->
+<section id="section-results">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5 text-center fade-up">
+        <span class="section-label">Local SEO Specialist</span>
+        <h2 class="section-title">Local SEO Specialist for Businesses<br>That Drive Real Results</h2>
+        <p class="section-sub">
+          Accidental growth does not exist because growth needs to be intentionally developed. Our complete local SEO services for businesses help your company become a dominant force in your local area.
+        </p>
+      </div>
+      <div class="col-lg-7 fade-up">
+        <div class="row g-4">
+          <div class="col-sm-6">
+            <div class="result-card">
+              <div class="result-num"><i class="bi bi-geo-alt-fill" style="font-size:2rem;"></i></div>
+              <p>Dominant force in your local area through complete local SEO services.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="result-card">
+              <div class="result-num"><i class="bi bi-lightbulb-fill" style="font-size:2rem;"></i></div>
+              <p>Intelligent and planned path to growth — no guesswork, only strategy.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="result-card">
+              <div class="result-num"><i class="bi bi-trophy-fill" style="font-size:2rem;"></i></div>
+              <p>Market dominance through strategic competition and dedicated specialist support.</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="result-card">
+              <div class="result-num"><i class="bi bi-graph-up-arrow" style="font-size:2rem;"></i></div>
+              <p>Intentionally developed growth that drives real, measurable business results.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 4 — WHAT YOU GET
+══════════════════════════════════════ -->
+<section id="section-whatyouget">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-lg-5 text-center fade-up">
+        <span class="section-label">What You Get</span>
+        <h2 class="section-title">What You Get with Our<br>Best Local SEO Services</h2>
+        <p class="section-sub">
+          The local SEO services we provide will deliver more than website visits because they will bring in visitors who match your target customer profile and who will complete their desired actions.
+        </p>
+      </div>
+      <div class="col-lg-7 fade-up">
+        <div class="deliver-item">
+          <div class="deliver-check"><i class="bi bi-check2"></i></div>
+          <p>On-page optimization that speaks your customer's language</p>
+        </div>
+        <div class="deliver-item">
+          <div class="deliver-check"><i class="bi bi-check2"></i></div>
+          <p>Google Maps ranking that puts you ahead of competitors</p>
+        </div>
+        <div class="deliver-item">
+          <div class="deliver-check"><i class="bi bi-check2"></i></div>
+          <p>High-quality local backlinks that build trust</p>
+        </div>
+        <div class="deliver-item">
+          <div class="deliver-check"><i class="bi bi-check2"></i></div>
+          <p>Mobile and voice search optimization for modern users</p>
+        </div>
+        <div class="deliver-item">
+          <div class="deliver-check"><i class="bi bi-check2"></i></div>
+          <p>Deep competitor insights to keep you one step ahead</p>
+        </div>
+        <div class="deliver-note">
+          <p>The local SEO services we provide will deliver more than website visits because they will bring in visitors who match your target customer profile and who will complete their desired actions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     SECTION 5 — CTA / PATH TO GROWTH
+══════════════════════════════════════ -->
+<section id="section-cta">
+  <div class="container position-relative">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8 fade-up">
+        <span class="section-label">The Right Local SEO Agency</span>
+        <h2 class="section-title mt-3">The Right Local SEO Agency Will Help<br>You Start Your Path To Growth</h2>
+        <p class="section-sub mb-5">
+          Your power to gain visibility will increase when we help you establish full control of your online presence.
+        </p>
+      </div>
+      <div class="col-lg-10 fade-up">
+        <div class="cta-highlight-box mb-5">
+          Choose a local SEO agency that has knowledge about your specific market area and understands your target audience and your company objectives. We help you rise above the noise, attract local customers, and build a brand that people trust. People will notice your presence. People will select your brand. People will keep your brand in their memory.
+        </div>
+        <p class="section-sub mb-5" style="color:rgba(255,255,255,0.9);font-size:1.1rem;font-weight:500;">
+          Let's turn your local presence into your biggest competitive advantage.
+        </p>
+        <a href="#" class="btn-cta-white">Get Started Today</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), (entry.target.dataset.delay || 0));
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach((el, i) => {
+    el.dataset.delay = (i % 4) * 80;
+    observer.observe(el);
+  });
+</script>
+
 <section class="stats-a">
   <div class="container">
     <div class="row g-4">
@@ -291,97 +789,6 @@ Expand your services and maintain a strong presence in the digital world.
     </div>
   </div>
 </section>
-
-<section class="services-section">
-    <div class="container">
-        <div class="section-header">
-            <h2>Our Portfolio</h2>
-            <p class="text-muted">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>Basic Website Development</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
-                    <a href="../web-devlopment/basic-web.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>Single Page Website Development</h5>
-                    </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint consequatur omnis voluptas tempore, officiis natus possimus voluptatibus fugiat aspernatur eaque, voluptatem esse impedit. Ut est magni aliquid dolorem non sapiente!</p>
-                    <a href="../web-devlopment/single-page.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>WordPress Website Development</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis quia enim dignissimos, mollitia iure beatae! Voluptatibus tempora, accusamus, architecto aut quibusdam exercitationem a molestias eum, nobis consequuntur sit ullam? Id!</p>
-                    <a href="../web-devlopment/wordpress.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>Website Revamping</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
-                    <a href="../web-devlopment/revamping.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>Custom Website Development</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
-                    <a href="../web-devlopment/custom-web.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-card">
-                    <div class="card-header-flex">
-                        <div class="icon-box">
-                            <img src="../images/icons.png" alt="Icon">
-                        </div>
-                        <h5>Custom Web Software Development</h5>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere ut, voluptatibus pariatur fugiat iure sit a omnis est, rem nisi hic? Recusandae, tempora. Eaque consectetur cum exercitationem dicta, a cupiditate.</p>
-                    <a href="../web-devlopment/custom-soft.html" class="card-link">View Projects <i class="bi bi-arrow-right"></i></a>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
 
 <section class="results-section py-5">
 <div class="container">
